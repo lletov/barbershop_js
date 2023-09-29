@@ -13,6 +13,7 @@
 
 body {
     background-color: var(--main-bg-color);
+    box-sizing: border-box;
 }
 
 button {
@@ -24,6 +25,7 @@ button {
 
 button:hover {
     cursor: pointer;
+    background-color: var(--main-bg-color);
 }
 
 .content-box {
@@ -32,6 +34,21 @@ button:hover {
     padding: 20px;
     max-width: 900px;
 }
+
+#loader {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid var(--main-dark-color); /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    display: none;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 /* banner */
 
@@ -73,4 +90,35 @@ button:hover {
     background-color: var(--main-white-color);
     border: none;
     border-bottom: solid 3px var(--main-dark-color);
+}
+
+/* discount */
+#discount {
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#discount-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#get-discount-button {
+    margin-top: 25px;
+}
+
+#discount-offer {
+    height: 160px;
+    width: 220px;
+    border: dashed 1px var(--main-dark-color);
+    font-size: 48px;
+    color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
