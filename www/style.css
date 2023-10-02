@@ -122,3 +122,42 @@ button:hover {
     justify-content: center;
     align-items: center;
 }
+
+/* accordion */
+
+#accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-button {
+    border: none;
+    font-size: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.accordion-button::before {
+    content: '>';
+    position: absolute;
+    right: 20px;
+    rotate: 90deg;
+} 
+
+.accordion-button.active::before {
+    rotate: 270deg;
+}
+
+.accordion-panel {
+    margin: 10px;
+    text-align: justify;
+    display: none;
+    max-height: 0;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.accordion-panel ul {
+    padding-top: 20px;
+    padding-left: 20px;
+}
