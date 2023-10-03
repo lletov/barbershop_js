@@ -129,7 +129,7 @@ hr {
     font-weight: 700;
     letter-spacing: 3px;
     position: absolute;
-    top: 150px;
+    top: 120px;
     left: 170px;
 }
 
@@ -139,11 +139,18 @@ hr {
     padding: 5px;
     font-size: 14px;
     position: absolute;
-    top: 195px;
+    top: 165px;
     left: 170px;
     width: 190px;
     line-height: 1.2;
     text-align: justify;
+}
+#barber-visit-button {
+    position: absolute;
+    top: 215px;
+    left: 170px;
+    margin: 0px;
+    width: 190px;
 }
 
 .top-barber {   
