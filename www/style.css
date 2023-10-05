@@ -6,9 +6,10 @@
     box-sizing: border-box;
     --main-bg-color: #f3f3f3;
     --main-dark-color: #000;
-    --main-accent-color: #0036e6;
+     --main-accent-color: hsl(27, 100%, 39%);  /* #cd6611 */
     --main-white-color: #fff;
     font-family: 'Gabarito', sans-serif;
+    scroll-behavior: smooth
 }
 
 body {
@@ -39,7 +40,7 @@ hr {
 
 .content-box {
     background-color: var(--main-white-color);
-    margin: 10px;
+    /* margin: 10px; */
     padding: 20px;
     max-width: 900px;
 }
@@ -59,27 +60,77 @@ hr {
     100% { transform: rotate(360deg); }
   }
 
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo img {
+    height: 30px;
+    filter: invert(100%) sepia(0%) saturate(7454%) hue-rotate(115deg) brightness(112%) contrast(114%);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
+.navigation button {
+    border: none;
+    border-bottom: solid 2px #fff;
+    background-color: #000;
+    color: #fff;
+}
+
+.navigation button:hover {
+    border-bottom: solid 2px var(--main-accent-color);
+}
+
+
 /* banner */
 
 #banner {
+    color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    height: 400px;
+    background: url('./img/background-logo.jpeg');
+    background-size: cover;
+    background-position: center; 
 }
 
 #banner-title {
     display: flex;
+    width: 50%;
     flex-direction: column;
     font-size: 20px;
-    height: 300px;
     justify-content: center;
-    padding-left: 50px;
 }
 
 #banner-button-box {
-    width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#banner-button-box button {
+    padding: 15px 70px;
+    font-weight: 700;
+    color: var(--main-accent-color);
+    background-color: var(--main-white-color);
+    border: solid 3px var(--main-accent-color);
 }
 
 /* tab */
@@ -160,6 +211,10 @@ hr {
     left: 170px;
     margin: 0px;
     width: 190px;
+    color: var(--main-accent-color);
+    background-color: var(--main-white-color);
+    border: solid 2px var(--main-accent-color);
+
 }
 
 .top-barber {   
@@ -190,6 +245,7 @@ hr {
 
 .service-row h3 {
     font-size: 24px;
+    color: var(--main-accent-color);
 }
 
 /* discount */
@@ -305,12 +361,15 @@ hr {
 #visit-person button{
     margin: 0px;
     height: 70px;
+    color: var(--main-white-color);
+    background-color: var(--main-dark-color);
 }
 
 .total-count {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
+    color: var(--main-accent-color);
 }
 
 .personal-data {
@@ -327,4 +386,67 @@ input {
 
 select {
     padding: 10px;
+}
+
+#contacts h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#contacts p {
+    color: #737373;
+}
+
+#contacts-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#contacts-content h3 {
+    margin: 10px 0px;
+}
+
+.contacts-map {
+    width: 300px;
+    height: 300px;
+    border: solid 1px #000;
+    position: relative;
+}
+
+.contacts-map img {
+    height: 100hv;
+    width: 100%;
+    filter: grayscale(100%);
+    
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 80px 10px;
+    background-color: var(--main-dark-color);
+    color: #fff;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links button {
+    background-color: #000;
+    color: #fff;
+    padding: 2px;
+    margin: 3px;
+    border: none;
+    border-bottom: solid 1px #fff;
+}
+
+.footer-contacts {
+    font-size: 14px;
+}
+.footer-contacts h3{
+    margin: 5px 0px;
 }
