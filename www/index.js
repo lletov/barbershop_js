@@ -1,5 +1,44 @@
 console.log('index.js connected')
 
+// render services from file
+let services = [{
+    name: 'Стрижка',
+    price: 1400
+}, {
+    name: 'Укладка',
+    price: 800
+}, {
+    name: 'Коррекция бороды',
+    price: 900
+}, {
+    name: 'Окрашивание',
+    price: 2400
+}, {
+    name: 'Эпиляция воском',
+    price: 450
+}]
+
+let servicesBlock = document.getElementById('services')
+let servicesSelect = document.getElementById('services-select')
+for (let i=0; i < services.length; i++) {
+    let serviceRow =
+    `<div class="service-row">
+        <p>${services[i].name}</p>
+        <h3>${services[i].price} р.</h3>
+    </div>`
+    servicesBlock.innerHTML += serviceRow
+
+    let serviceSelect = 
+    `<div class="service-select-row">
+        <input type="checkbox">
+        <label for="">${services[i].name} (${services[i].price} р.)</label>
+    </div>`
+    servicesSelect.innerHTML += serviceSelect
+
+}
+
+
+
 // tab 
 function openTab (evt, tabName) {
     let tabsContent = document.getElementsByClassName('tab-content');

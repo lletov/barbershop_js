@@ -16,7 +16,30 @@
             <button>Записаться</button>
         </div>
     </div>
-    <div class="content-box">
+    
+    <div class="content-box" >
+        <div id="team-title"><h1>КОМАНДА</h1></div>
+        <div id="team">
+        <div class="personal">
+            <img src="img/barber_andr.jpeg" alt="Барбер Андрей">
+            <div class="personal-title">АНДРЕЙ</div>
+            <div class="personal-subtitle">Мастер своего дела, внимателен к мелочам</div>
+            <button id="barber-visit-button">Записаться</button>
+            <div class="top-barber">TOP BARBER</div>
+        </div>
+        <div class="personal">
+            <img src="img/barber_ser.jpeg" alt="Барбер Сергей">
+            <div class="personal-title">СЕРГЕЙ</div>
+            <div class="personal-subtitle">Профессионал с большой буквы, топ барбер</div>
+            <button id="barber-visit-button">Записаться</button>
+        </div>
+        </div>
+    </div>
+    <div class="content-box" id="price">
+        <h1>УСЛУГИ  И ЦЕНЫ</h1>
+        <div class="services-list" id="services"></div>
+    </div>
+    <div class="content-box" id="tab">
         <div id="tab-links">
             <button class="tab-button" id="deafault-open-tab" onclick="openTab(event, 'haircut')">СТРИЖКА</button>
             <button class="tab-button" onclick="openTab(event, 'styling')">УКЛАДКА</button>
@@ -32,22 +55,6 @@
             <p>Бритьё — один из способов принудительного или добровольного удаления волос с головы или тела.</p>
         </div>
     </div>
-    <div class="content-box" id="team">
-        <div class="personal">
-            <img src="img/barber_andr.jpeg" alt="Барбер Андрей">
-            <div class="personal-title">АНДРЕЙ</div>
-            <div class="personal-subtitle">Мастер своего дела, внимателен к мелочам</div>
-            <button id="barber-visit-button">Записаться</button>
-            <div class="top-barber">TOP BARBER</div>
-        </div>
-        <div class="personal">
-            <img src="img/barber_ser.jpeg" alt="Барбер Сергей">
-            <div class="personal-title">СЕРГЕЙ</div>
-            <div class="personal-subtitle">Профессионал с большой буквы, топ барбер</div>
-            <button id="barber-visit-button">Записаться</button>
-        </div>
-
-    </div>
     <div class="content-box" id="discount">
         <div id="discount-title">
             <h1>ПОЛУЧИТЕ СКИДКУ</h1>
@@ -61,25 +68,38 @@
         </div>
     </div>
     <div class='content-box' id="visit">
-        <p>Выберите дату</p>
-        <p>Выберите мастера</p>
-        <select name="select-barber" id="select-barber">
-            <option value="sergey-barber">Сергей</option>
-            <option value="andrey-barber">Андрей</option>
-        </select>
-        <p>Выберите услугу</p>
-        <select name="select-service" id="">
-            <option value="haircut">Стрижка</option>
-            <option value="styling">Укладка</option>
-            <option value="shaving">Бритье</option>
-        </select>
-        <p>Дополнительные параметры</p>
-        <p>Ваше имя</p>
-        <input type="text">
-        <p>Ваш телефон</p>
-        <input type="phone">
-        <p>Я  согласен на обработку персональных данных</p>
-        <button>Записаться</button>
+        <h1>ЗАПИСАТЬСЯ</h1>
+        <div class="visit-content">
+            <div id="visit-services">
+                <h3>Выберите дату</h3>
+                <input type="date">
+                <hr>
+                <h3>Выберите мастера</h3>
+                <select name="select-barber" id="select-barber">
+                    <option value="sergey-barber">Сергей</option>
+                    <option value="andrey-barber">Андрей</option>
+                </select>
+                <hr>
+                <h3>Выберите услугу</h3>
+                <div id='services-select'></div>
+                <hr>
+                <div class="total-count">
+                    <h2>ИТОГО</h2>
+                    <h2>00 руб.</h2>
+                </div>
+            </div>
+            <div id="visit-person">
+                <h3>Ваше имя</h3>
+                <input type="text">
+                <h3>Ваш телефон</h3>
+                <input type="tel">
+                <div class="personal-data">
+                    <input type="checkbox">
+                    <label for="">Продолжая, я даю согласие на обработку моих персональных данных, а именно: сбор, хранение, использование для рассылки рекламных материалов.</label>
+                </div>
+                <button>Записаться</button>
+            </div>
+        </div>
     </div>
     <div class="content-box" id="accordion">
         <button class="accordion-button">Нужно ли мыть голову перед стрижкой?</button>
