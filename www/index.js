@@ -2,18 +2,23 @@ console.log('index.js connected')
 
 // render services from file
 let services = [{
+    id: 0,
     name: 'Стрижка',
     price: 1400
 }, {
+    id: 1,
     name: 'Укладка',
     price: 800
 }, {
+    id: 2,
     name: 'Коррекция бороды',
     price: 900
 }, {
+    id: 3,
     name: 'Окрашивание',
     price: 2400
 }, {
+    id:4,
     name: 'Эпиляция воском',
     price: 450
 }]
@@ -29,14 +34,21 @@ for (let i=0; i < services.length; i++) {
     servicesBlock.innerHTML += serviceRow
 
     let serviceSelect = 
-    `<div class="service-select-row">
-        <input type="checkbox">
+    `<div class="service-select-row" >
+        <input type="checkbox" id="service-select-row-${services[i].id}" onclick="changeValue(${services[i].id})">
         <label for="">${services[i].name} (${services[i].price} р.)</label>
     </div>`
     servicesSelect.innerHTML += serviceSelect
 
 }
 
+// select barber
+const barberSelector = document.getElementById('select-barber')
+barberSelector.value = ''
+function selectThisBarber(barber) {
+    barberSelector.value = barber
+    document.getElementById('visit').scrollIntoView()
+}
 
 
 // tab 
@@ -79,6 +91,22 @@ function getDiscount() {
         loader.style.display = 'none'
     }, 2000)
 
+}
+
+// visit
+
+function changeValue(id) {
+    total = document.getElementById('total').textContent
+    totalElement = document.getElementById('total')
+    totalElement.innerHTML = '0'
+    let res = Number(total) + 15
+    if (document.getElementById(`service-select-row-${id}`).checked == true) {
+        let res = Number(total) + services[id].price
+        totalElement.innerHTML = `${res}`
+    } else {
+        let res = Number(total) - services[id].price
+        totalElement.innerHTML = `${res}`
+    }
 }
 
 // accordion

@@ -24,7 +24,7 @@
             <p>Стильно! Быстро! С удовольствием!</p>
         </div>
         <div id="banner-button-box">
-            <button>Записаться</button>
+            <a href="#visit"><button>Записаться</button></a>
         </div>
     </div>
     
@@ -36,14 +36,14 @@
             <img src="img/barber_andr.jpeg" alt="Барбер Андрей">
             <div class="personal-title">АНДРЕЙ</div>
             <div class="personal-subtitle">Мастер своего дела, внимателен к мелочам</div>
-            <button id="barber-visit-button">Записаться</button>
+            <button id="barber-visit-button" onclick="selectThisBarber('andrey-barber')">Записаться</button>
             <div class="top-barber">TOP BARBER</div>
         </div>
         <div class="personal">
             <img src="img/barber_ser.jpeg" alt="Барбер Сергей">
             <div class="personal-title">СЕРГЕЙ</div>
             <div class="personal-subtitle">Профессионал с большой буквы, топ барбер</div>
-            <button id="barber-visit-button">Записаться</button>
+            <button id="barber-visit-button" onclick="selectThisBarber('sergey-barber')">Записаться</button>
         </div>
         </div>
     </div>
@@ -85,21 +85,22 @@
         <h1>ЗАПИСАТЬСЯ</h1>
         <div class="visit-content">
             <div id="visit-services">
-                <h3>Выберите дату</h3>
-                <input type="date">
-                <hr>
                 <h3>Выберите мастера</h3>
                 <select name="select-barber" id="select-barber">
                     <option value="sergey-barber">Сергей</option>
                     <option value="andrey-barber">Андрей</option>
                 </select>
                 <hr>
+                <h3>Выберите дату</h3>
+                <input type="date">
+                <hr>
                 <h3>Выберите услугу</h3>
                 <div id='services-select'></div>
                 <hr>
                 <div class="total-count">
                     <h2>ИТОГО</h2>
-                    <h2>00 руб.</h2>
+                    <h2 id="total">0</h2>
+                    <h2> .руб</h2>
                 </div>
             </div>
             <div id="visit-person">
@@ -111,7 +112,7 @@
                     <input type="checkbox">
                     <label for="">Продолжая, я даю согласие на обработку моих персональных данных, а именно: сбор, хранение, использование для рассылки рекламных материалов.</label>
                 </div>
-                <button>Записаться</button>
+                <button onclick="printValue()">Записаться</button>
             </div>
         </div>
     </div>
