@@ -46,12 +46,10 @@ for (let i=0; i < services.length; i++) {
 const header = document.getElementById('header')
 const navigation = document.querySelector('.content-box')
 const mobileNavButton = document.querySelector('.mobile-menu-button')
-const servicesButtons = document.querySelector('.navigation').childNodes
 mobileNavButton.onclick = function (){
     navigation.classList.toggle('mobile');
     header.style.flexDirection = 'column';
     header.style.justifyContent = 'start';
-    console.log(servicesButtons)
 }
 function backStyle(){
     header.style.flexDirection = 'row';
