@@ -42,13 +42,29 @@ for (let i=0; i < services.length; i++) {
 
 }
 
-// select barber
-const barberSelector = document.getElementById('select-barber')
-barberSelector.value = ''
-function selectThisBarber(barber) {
-    barberSelector.value = barber
-    document.getElementById('visit').scrollIntoView()
+// mobile nav menu
+const header = document.getElementById('header')
+const navigation = document.querySelector('.content-box')
+const mobileNavButton = document.querySelector('.mobile-menu-button')
+const servicesButtons = document.querySelector('.navigation').childNodes
+mobileNavButton.onclick = function (){
+    navigation.classList.toggle('mobile');
+    header.style.flexDirection = 'column';
+    header.style.justifyContent = 'start';
+    console.log(servicesButtons)
 }
+function backStyle(){
+    header.style.flexDirection = 'row';
+    header.style.justifyContent = 'space-between';
+}
+
+// select barber
+// const barberSelector = document.getElementById('select-barber')
+// barberSelector.value = ''
+// function selectThisBarber(barber) {
+//     barberSelector.value = barber
+//     document.getElementById('visit').scrollIntoView()
+// }
 
 
 // tab 
