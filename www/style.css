@@ -512,7 +512,7 @@ select {
     text-align: start;
     align-items: center;
 
-    margin: 15px;
+    margin: auto;
     width: 400px;
     max-height: 600px;
     background:#fff;
@@ -567,6 +567,9 @@ select {
     align-items: center;
     padding: 30px;
     border: solid 1px #000;
+    width: 200px;
+    margin: auto;
+    margin-top: 200px;
 }
 
 @media screen and (max-width: 880px) {
