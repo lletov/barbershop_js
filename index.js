@@ -202,7 +202,7 @@ function fillModal(){
     <h3>Услуги:</h3>
     <p>${selectedServices}</p>
     <h3>Итого:</h3>
-    <p>${document.getElementById('total').textContent}</p>
+    <p>${document.getElementById('total').textContent} р.</p>
     <h3>Ваш номер:</h3>
     <p>${document.getElementById('phone-input').value}</p>
     <button id='confirm-visit' onclick = 'openFinalModal()'>Подтвердить и записаться</button>
