@@ -1,20 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600;800&family=Oswald:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Oswald:wght@300;500&display=swap');
+
+
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    --main-bg-color: #f3f3f3;
-    --main-dark-color: #000;
-     --main-accent-color: hsl(27, 100%, 39%);  /* #cd6611 */
-    --main-white-color: #fff;
-    font-family: 'Gabarito', sans-serif;
+    --main-bg-color: #f1f1f1;
+    --content-bg-color: #fff;
+    --shadow-color: #dadada;
+    --main-black: #202020;
+    --button-hover-color: #f7f7f7;
+    --accent-color: #2b375f;  /* #cd6611 */
+    --grey-text: #8f8f8f;
     scroll-behavior: smooth;
-    --screen: 720px;
+    --screen: 900px;
 }
 
 body {
     background-color: var(--main-bg-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     box-sizing: border-box;
     max-width: 900px;
     margin: auto;
@@ -22,29 +29,260 @@ body {
 
 button {
     padding: 5px;
-    margin: 5px;
-    background-color: var(--main-white-color);
-    border: solid 1px var(--main-dark-color);
+    background-color: var(--content-bg-color);
+    border: solid 1px var(--main-black);
 }
 
 button:hover {
     cursor: pointer;
-    background-color: var(--main-bg-color);
+    background-color: var(--button-hover-color);
 }
 
-hr {
+
+
+.content {
+    background-color: var(--content-bg-color);
+    margin: 10px;
+    padding: 50px;
+    max-width: 1100px;
+    box-shadow: 0px 0px 10px var(--shadow-color);
+}
+
+.content-title {
+    font-size: 18px;
+    border-bottom: solid 2px var(--accent-color);
+    margin: 30px auto;
+}
+
+.banner {
+    position: relative;
+    color: var(--main-white-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    /* background: linear-gradient(70deg, rgba(43, 55, 95, 0.7), rgba(43, 55, 95, 0.5)), url('./img/cartoon-bg.jpg'); */
+    background-size: cover;
+    background-position: center; 
+}
+
+
+.banner-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.banner button {
+    height: 50px;
+    width: 200px;
+}
+
+#banner-arrow-down {
+    /* color: var(--content-bg-color); */
+    font-size: 20px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    animation: top-down ease-out 0.7s infinite alternate;
+}
+@keyframes top-down {
+    from {height: 2%}
+    to {height: 5%}
+}
+
+.mission {
+    padding: 100px 50px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#mission-accent-word {
+    text-decoration: underline 3px var(--accent-color);
+}
+
+.team {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.personal {
+    /* background-color: #cccbcb; */
+    width: 350px;
+    position: relative;
+}
+.personal img {
+    height: 250px;
+    width: 250px;
+}
+
+.personal-title {
+    background-color: var(--content-bg-color);
+    border: solid 1px var(--main-black);
+    padding: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 120px;
+    left: 160px;
+}
+
+.personal-subtitle {
+    background-color: var(--content-bg-color);
+    border: solid 1px var(--main-black);
+    padding: 5px;
+    font-size: 14px;
+    position: absolute;
+    top: 165px;
+    left: 160px;
+    width: 190px;
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.personal button {
+    position: absolute;
+    top: 215px;
+    left: 160px;
+    width: 190px;
+}
+
+.top-barber { 
+    display: flex;  
+    align-items: center;
+    position: absolute;
+    color: var(--content-bg-color);
+    background-color: var(--main-black);
+    font-size: 10px;
+    padding: 5px;
+    top: -10px;
+    left: 205px;
+}
+
+.top-barber img {
+    margin-right: 1px;
+    height: 12px;
+    width: 12px;
+    filter: invert(100%) sepia(32%) saturate(148%) hue-rotate(181deg) brightness(117%) contrast(100%);
+}
+
+/* #price h1 {
+    margin-bottom: 30px;
+    text-align: center;
+} */
+
+.service-row {
+    position: relative;
+    margin: 35px 0px;
+    max-width: 100%;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    border-top: solid 1px var(--main-dark-color);
+    border-bottom: solid 1px var(--main-dark-color);
+}
+.service-row p {
+    min-width: 50px;
+    font-size: 20px;
+}
+
+.service-row h3 {
+    font-size: 24px;
+    color: var(--main-accent-color);
+}
+
+.service-row-line {
+    flex: 1;
+    margin: auto 25px;
+    border-bottom: dashed 1px var(--accent-color);
+    max-width: 100%;
+    height: 3px;
+}
+
+.service-row img {
+    height: 10px;
+    /* width: 20px; */
+    position: absolute;
+    top: 10px;
+    left: 50%;
+}
+
+#tab {
+    height: 320px;
+}
+
+#tab-links {
+    border-bottom: solid 2px var(--main-black);
+}
+
+#tab-links button {
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+}
+.tab-content {
+    display: none;
+    padding-top: 20px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.tab-button.active {
+    color: var(--content-bg-color);
+    background-color: var(--main-black);
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* hr {
     height: 3px;
     border: none;
     background-color: var(--main-bg-color);
     margin: 5px;
-}
+} */
 
-.content-box {
-    background-color: var(--main-white-color);
-    /* margin: 10px; */
-    padding: 20px;
-    max-width: 900px;
-}
 
 #loader {
     border: 5px solid #f3f3f3; /* Light grey */
@@ -146,22 +384,8 @@ hr {
 
 /* banner */
 
-#banner {
-    color: #fff;
-    display: flex;
-    justify-content: space-around;
-    height: 400px;
-    background: url('./img/background-logo.jpeg');
-    background-size: cover;
-    background-position: center; 
-}
 
-#banner-title {
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    justify-content: center;
-}
+
 
 #banner-button-box {
     display: flex;
@@ -174,34 +398,10 @@ hr {
     font-weight: 700;
     color: var(--main-accent-color);
     background-color: var(--main-white-color);
-    border: solid 3px var(--main-accent-color);
+    border: solid 1px var(--main-accent-color);
 }
 
 /* tab */
-#tab {
-    height: 270px;
-}
-
-.tab-content {
-    display: none;
-    padding-top: 20px;
-    text-align: justify;
-    line-height: 1.7;
-}
-
-.tab-button {
-    background-color: var(--main-white-color);
-    border: none;
-    font-weight: 700;
-    border-bottom: solid 3px var(--main-bg-color);
-    transition: 0.5s border-bottom;
-}
-
-.tab-button.active {
-    /* background-color: var(--main-white-color);
-    border: none; */
-    border-bottom: solid 3px var(--main-dark-color);
-}
 
 /* team */
 
@@ -216,39 +416,6 @@ hr {
     margin-bottom: 30px;
 }
 
-.personal {
-    width: 40%;
-    position: relative;
-}
-.personal img {
-    height: 250px;
-    width: 250px;
-}
-
-.personal-title {
-    background-color: var(--main-white-color);
-    border: solid 1px var(--main-dark-color);
-    padding: 5px;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    position: absolute;
-    top: 120px;
-    left: 170px;
-}
-
-.personal-subtitle {
-    background-color: var(--main-white-color);
-    border: solid 1px var(--main-dark-color);
-    padding: 5px;
-    font-size: 14px;
-    position: absolute;
-    top: 165px;
-    left: 170px;
-    width: 190px;
-    line-height: 1.2;
-    text-align: justify;
-}
 #barber-visit-button {
     position: absolute;
     top: 215px;
@@ -261,36 +428,7 @@ hr {
 
 }
 
-.top-barber {   
-    position: absolute;
-    color: var(--main-white-color);
-    background-color: var(--main-dark-color);
-    font-size: 10px;
-    padding: 5px;
-    top: -10px;
-    left: 220px;
-}
 
-/* services */
-#price h1 {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.service-row {
-    margin: 5px 150px;
-    padding: 5px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: solid 1px var(--main-dark-color);
-    border-bottom: solid 1px var(--main-dark-color);
-}
-
-.service-row h3 {
-    font-size: 24px;
-    color: var(--main-accent-color);
-}
 
 /* discount */
 #discount {

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="content-box" id="header">
+    <!-- <div class="content-box" id="header">
         <div class="logo">
             <img src="img/logo.png" alt="Barbershop">
             <h1>BARBERSHOP</h1>
@@ -22,43 +22,48 @@
             <a href=""><button class="close-mobile-menu-button">Закрыть</button></a>
         </div>
         
-    </div>
-    <div class="content-box" id="banner">
-        <div id="banner-title">
+    </div> -->
+    <div class="content banner">
+        <div class="banner-title">
             <h1>ЛУЧШИЙ <br>
                 БАРБЕРШОП</h1>
             <p>Стильно! Быстро! С удовольствием!</p>
         </div>
-        <div id="banner-button-box">
+        <div>
             <a href="#visit"><button>Записаться</button></a>
+            <!-- <p> Ежедневно, 10:00 - 22:00</p> -->
+        </div>
+        <p id='banner-arrow-down'>&#129123;</p>
+    </div>
+    <div class="content mission">
+        <p><span id="mission-accent-word">Наша миссия</span> - делать красивыми всех вокруг! Любой может выглядеть достойно, независимо от возраста и типа волос.</p>
+    </div>
+    <div class="content" >
+        <div class="content-title"><h1>КОМАНДА</h1></div>
+        <div class="team">
+            <div class="personal">
+                <img src="img/barber_andr.jpeg" alt="Барбер Андрей">
+                <div class="personal-title">АНДРЕЙ</div>
+                <div class="personal-subtitle">Мастер своего дела, внимателен к мелочам</div>
+                <button onclick="selectThisBarber('andrey-barber')">Записаться</button>
+                <div class="top-barber">
+                    <img src="./img/star_icon.png" alt="">
+                    <p>TOP BARBER</p>
+                </div>
+            </div>
+            <div class="personal">
+                <img src="img/barber_ser.jpeg" alt="Барбер Сергей">
+                <div class="personal-title">СЕРГЕЙ</div>
+                <div class="personal-subtitle">Профессионал с большой буквы, топ барбер</div>
+                <button onclick="selectThisBarber('sergey-barber')">Записаться</button>
+            </div>
         </div>
     </div>
-    
-    <div class="content-box" >
-        <hr>
-        <div id="team-title"><h1>КОМАНДА</h1></div>
-        <div id="team">
-        <div class="personal">
-            <img src="img/barber_andr.jpeg" alt="Барбер Андрей">
-            <div class="personal-title">АНДРЕЙ</div>
-            <div class="personal-subtitle">Мастер своего дела, внимателен к мелочам</div>
-            <button id="barber-visit-button" onclick="selectThisBarber('andrey-barber')">Записаться</button>
-            <div class="top-barber">TOP BARBER</div>
-        </div>
-        <div class="personal">
-            <img src="img/barber_ser.jpeg" alt="Барбер Сергей">
-            <div class="personal-title">СЕРГЕЙ</div>
-            <div class="personal-subtitle">Профессионал с большой буквы, топ барбер</div>
-            <button id="barber-visit-button" onclick="selectThisBarber('sergey-barber')">Записаться</button>
-        </div>
-        </div>
-    </div>
-    <div class="content-box" id="price">
-        <hr>
-        <h1>УСЛУГИ  И ЦЕНЫ</h1>
+    <div class="content price">
+        <div class="content-title"><h1>УСЛУГИ  И ЦЕНЫ</h1></div>
         <div class="services-list" id="services"></div>
     </div>
-    <div class="content-box" id="tab">
+    <div class="content" id="tab">
         <div id="tab-links">
             <button class="tab-button" id="deafault-open-tab" onclick="openTab(event, 'haircut')">СТРИЖКА</button>
             <button class="tab-button" onclick="openTab(event, 'styling')">УКЛАДКА</button>

@@ -29,7 +29,9 @@ for (let i=0; i < services.length; i++) {
     let serviceRow =
     `<div class="service-row">
         <p>${services[i].name}</p>
+        <div class="service-row-line"></div>
         <h3>${services[i].price} р.</h3>
+        <img src="./img/scissors.png" alt="">
     </div>`
     servicesBlock.innerHTML += serviceRow
 
