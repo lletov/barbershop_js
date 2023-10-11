@@ -38,6 +38,28 @@ button:hover {
     background-color: var(--button-hover-color);
 }
 
+hr {
+    /* height: 3px;
+    border: none;
+    background-color: var(--main-bg-color); */
+    margin: 15px auto;
+}
+
+#loader {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid var(--main-black); 
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 
 
 .content {
@@ -205,14 +227,14 @@ button:hover {
 
 .service-row img {
     height: 10px;
-    /* width: 20px; */
+    width: auto;
     position: absolute;
     top: 10px;
     left: 50%;
 }
 
 #tab {
-    height: 320px;
+    height: 500px;
 }
 
 #tab-links {
@@ -238,66 +260,214 @@ button:hover {
     border: none;
 }
 
+.discount {
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
+#discount-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+#discount-title p {
+    margin: 10px auto;
+    color: var(--grey-text);
+}
 
+.visit-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
+}
 
+#visit h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
+#visit-services {
+    width: 40%;
+}
 
+.service-select-row {
+    padding: 5px 0px;
+}
 
+#visit-person {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
 
+#visit-person button{
+    margin: 0px;
+    height: 70px;
+    color: var(--content-bg-color);
+    background-color: var(--main-black);
+}
 
+#accordion {
+    display: flex;
+    flex-direction: column;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* hr {
-    height: 3px;
+.accordion-button {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    position: relative;
+    padding: 20px 50px 20px 0px;
     border: none;
-    background-color: var(--main-bg-color);
-    margin: 5px;
-} */
+    border-bottom: solid 1px var(--main-black);
+}
 
+.accordion-button::before {
+    content: '>';
+    margin: 3px;
+    position: absolute;
+    right: 10px;
+    rotate: 90deg;
+    transition: 0.5s rotate;
+} 
 
-#loader {
-    border: 5px solid #f3f3f3; /* Light grey */
-    border-top: 5px solid var(--main-dark-color); /* Blue */
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
+.accordion-button.active::before {
+    rotate: 270deg;
+}
+
+.accordion-panel {
+    margin: 10px;
+    text-align: justify;
     display: none;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+    max-height: 0;
+    transition: 0.4s;
+    overflow: hidden;
+    line-height: 1.7;
+}
+
+.accordion-panel ul {
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.accordion-panel ul li {
+    margin: 10px 0px;
+}
+
+#contacts p {
+    margin-top: 20px;
+    color: var(--grey-text);
+}
+
+#contacts-content h3 {
+    margin: 10px 0px;
+}
+
+#contacts-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.contacts-map {
+    width: 300px;
+    height: 300px;
+    border: solid 1px #000;
+    
+}
+
+.contacts-map img {
+    height: 100hv;
+    width: 100%;
+    filter: grayscale(100%);
+    
+}
+
+.geotag {
+    position: absolute;
+    top: 40px;
+    left: 600px;
+    width: auto;
+    height: 30px;
+
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 80px 50px;
+    background-color: var(--main-black);
+    color: var(--content-bg-color);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links button {
+    background-color: #000;
+    color: #fff;
+    padding: 2px;
+    margin: 3px;
+    border: none;
+    border-bottom: solid 1px #fff;
+}
+
+.footer-contacts {
+    width: 30%;
+    font-size: 14px;
+}
+.footer-contacts h3{
+    margin: 0px 0px 15px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #header {
     display: flex;
@@ -431,19 +601,7 @@ button:hover {
 
 
 /* discount */
-#discount {
-    height: 300px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
-#discount-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 #get-discount-button {
     margin-top: 25px;
@@ -463,90 +621,16 @@ button:hover {
 
 /* accordion */
 
-#accordion {
-    display: flex;
-    flex-direction: column;
-}
 
-.accordion-button {
-    border: none;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: left;
-    position: relative;
-    padding-right: 30px;
-}
 
-.accordion-button::before {
-    content: '>';
-    margin: 3px;
-    position: absolute;
-    right: 10px;
-    rotate: 90deg;
-    transition: 0.5s rotate;
-} 
 
-.accordion-button.active::before {
-    rotate: 270deg;
-}
 
-.accordion-panel {
-    margin: 10px;
-    text-align: justify;
-    display: none;
-    max-height: 0;
-    transition: 0.4s;
-    overflow: hidden;
-    line-height: 1.7;
-}
-
-.accordion-panel ul {
-    padding-top: 20px;
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-.accordion-panel ul li {
-    margin: 10px 0px;
-}
-
-.visit-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-}
-
-#visit h1 {
+/* #visit h1 {
     text-align: center;
     margin-bottom: 30px;
-}
+} */
 
-#visit h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
-#visit-services {
-    width: 40%;
-}
-
-.service-select-row {
-    padding: 5px 0px;
-}
-
-#visit-person {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-}
-
-#visit-person button{
-    margin: 0px;
-    height: 70px;
-    color: var(--main-white-color);
-    background-color: var(--main-dark-color);
-}
 
 .total-count {
     margin-top: 30px;
@@ -571,68 +655,9 @@ select {
     padding: 10px;
 }
 
-#contacts h1 {
-    margin-bottom: 30px;
-    text-align: center;
-}
 
-#contacts p {
-    color: #737373;
-}
 
-#contacts-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
 
-#contacts-content h3 {
-    margin: 10px 0px;
-}
-
-.contacts-map {
-    width: 300px;
-    height: 300px;
-    border: solid 1px #000;
-    position: relative;
-}
-
-.contacts-map img {
-    height: 100hv;
-    width: 100%;
-    filter: grayscale(100%);
-    
-}
-
-#footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 80px 10px;
-    background-color: var(--main-dark-color);
-    color: #fff;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-links button {
-    background-color: #000;
-    color: #fff;
-    padding: 2px;
-    margin: 3px;
-    border: none;
-    border-bottom: solid 1px #fff;
-}
-
-.footer-contacts {
-    font-size: 14px;
-}
-.footer-contacts h3{
-    margin: 5px 0px;
-}
 
 .modal {
     display: none;
