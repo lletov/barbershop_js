@@ -45,6 +45,22 @@ hr {
     margin: 15px auto;
 }
 
+input {
+    padding: 10px;
+}
+
+select {
+    padding: 10px;
+}
+
+a {
+    color: var(--main-black);
+}
+
+a:hover {
+    color: var(--main-black);
+}
+
 #loader {
     border: 5px solid #f3f3f3; /* Light grey */
     border-top: 5px solid var(--main-black); 
@@ -99,6 +115,19 @@ hr {
 .banner button {
     height: 50px;
     width: 200px;
+}
+
+#banner-button-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner-button-box p {
+    color: var(--grey-text);
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 #banner-arrow-down {
@@ -280,6 +309,18 @@ hr {
     color: var(--grey-text);
 }
 
+#discount-offer {
+    height: 160px;
+    width: 220px;
+    border: dashed 1px var(--main-dark-color);
+    font-size: 48px;
+    color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .visit-content {
     display: flex;
     flex-direction: row;
@@ -297,27 +338,31 @@ hr {
 }
 
 #select-barber {
-    color: var(--main-black);
     width: 100%;
-    height: 25px;
-    background-color: var(--content-bg-color);
+    height: 40px;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
 }
 
 #date-input {
-    color: var(--main-black);
     width: 100%;
-    background-color: var(--content-bg-color);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
+    border: solid 1px var(--main-black);
 }
 
 
 .service-select-row {
     padding: 5px 0px;
+}
+
+.total-count {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--main-accent-color);
 }
 
 #visit-person {
@@ -331,6 +376,112 @@ hr {
     height: 70px;
     color: var(--content-bg-color);
     background-color: var(--main-black);
+}
+
+.personal-data {
+    margin-top: 80px;
+    margin-bottom: 10px;
+    text-align: justify;
+    font-size: 12px;
+    color: #737373;
+}
+
+#not-all-fields {
+    margin-top: 10px;
+    color: red;
+    display: none;
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 3;
+
+}
+.modal-content {
+    position: relative;
+    text-align: start;
+    align-items: center;
+
+    margin: auto;
+    width: 400px;
+    max-height: 600px;
+    background:#fff;
+    border: solid 1px #000;
+    padding: 60px 30px 20px 30px;
+    
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.modal-content p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+#confirm-visit {
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+    height: 50px;
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    line-height: 15px;
+}
+
+
+
+.modal-final {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 3;
+    
+}
+
+.modal-final.active {
+    display: block;
+    
+}
+
+.modal-final-content {
+    background-color: rgb(228, 255, 228);
+    color: #009111;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    border: solid 1px #000;
+    width: 240px;
+    margin: auto;
+    margin-top: 200px;
+    border: none;
+}
+
+.modal-final-content h3 {
+    margin-bottom: 20px;
+
+
 }
 
 #accordion {
@@ -360,11 +511,11 @@ hr {
 } 
 
 .accordion-button.active::before {
-    rotate: 270deg;
+    rotate: 135deg;
 }
 
 .accordion-panel {
-    margin: 10px;
+    margin: 20px 0px 10px 0px;
     text-align: justify;
     display: none;
     max-height: 0;
@@ -567,188 +718,6 @@ hr {
 }
 
 
-/* banner */
-
-
-
-
-#banner-button-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#banner-button-box button {
-    padding: 15px 70px;
-    font-weight: 700;
-    color: var(--main-accent-color);
-    background-color: var(--main-white-color);
-    border: solid 1px var(--main-accent-color);
-}
-
-/* tab */
-
-/* team */
-
-#team {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 40px;
-}
-#team-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-#barber-visit-button {
-    position: absolute;
-    top: 215px;
-    left: 170px;
-    margin: 0px;
-    width: 190px;
-    color: var(--main-accent-color);
-    background-color: var(--main-white-color);
-    border: solid 2px var(--main-accent-color);
-
-}
-
-
-
-/* discount */
-
-
-#get-discount-button {
-    margin-top: 25px;
-}
-
-#discount-offer {
-    height: 160px;
-    width: 220px;
-    border: dashed 1px var(--main-dark-color);
-    font-size: 48px;
-    color: var(--main-bg-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* accordion */
-
-
-
-
-
-/* #visit h1 {
-    text-align: center;
-    margin-bottom: 30px;
-} */
-
-
-
-.total-count {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    color: var(--main-accent-color);
-}
-
-.personal-data {
-    margin-top: 80px;
-    margin-bottom: 10px;
-    text-align: justify;
-    font-size: 12px;
-    color: #737373;
-}
-
-input {
-    padding: 10px;
-}
-
-select {
-    padding: 10px;
-}
-
-
-
-
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 3;
-}
-.modal-content {
-    position: relative;
-    text-align: start;
-    align-items: center;
-
-    margin: auto;
-    width: 400px;
-    max-height: 600px;
-    background:#fff;
-    border: solid 1px #000;
-    padding: 60px 10px 20px 10px;
-}
-
-.modal-content h2 {
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
-.modal-content p {
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-#confirm-visit {
-    color: #fff;
-    background-color: #000;
-    width: 95%;
-    height: 50px;
-}
-
-#close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 25px;
-    height: 25px;
-}
-
-#not-all-fields {
-    color: red;
-    display: none;
-}
-
-.modal-final {
-    display: none;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 3;
-}
-
-.modal-final-content {
-    background-color: rgb(171, 248, 171);
-    text-align: center;
-    align-items: center;
-    padding: 30px;
-    border: solid 1px #000;
-    width: 200px;
-    margin: auto;
-    margin-top: 200px;
-}
 
 @media screen and (max-width: 880px) {
     .mobile-menu-button {
