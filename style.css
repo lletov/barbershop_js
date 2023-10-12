@@ -329,11 +329,13 @@ hr {
 }
 
 .accordion-button::before {
-    content: '\1438';
+    content: '\221F';
+    font-size: 24px;
     margin: 3px;
     position: absolute;
     right: 10px;
-    rotate: 270deg;
+    top: 15px;
+    rotate: -45deg;
     transition: 0.5s rotate;
 } 
 
