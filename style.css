@@ -404,6 +404,7 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: start;
     padding: 80px 50px;
     background-color: var(--main-black);
     color: var(--content-bg-color);
@@ -412,6 +413,8 @@ hr {
 .footer-links {
     display: flex;
     flex-direction: column;
+    min-width: 200px;
+    margin: 0px 20px;
 }
 
 .footer-links button {
@@ -424,7 +427,6 @@ hr {
 }
 
 .footer-contacts {
-    width: 30%;
     font-size: 14px;
 }
 .footer-contacts h3{
