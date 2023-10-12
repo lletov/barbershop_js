@@ -116,8 +116,9 @@ hr {
 
 .mission {
     padding: 100px 50px;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 30px;
+    text-align: justify;
 }
 
 #mission-accent-word {
@@ -328,11 +329,11 @@ hr {
 }
 
 .accordion-button::before {
-    content: '>';
+    content: '\1438';
     margin: 3px;
     position: absolute;
     right: 10px;
-    rotate: 90deg;
+    rotate: 270deg;
     transition: 0.5s rotate;
 } 
 
@@ -370,7 +371,6 @@ hr {
 }
 
 #contacts-content {
-    /* position: relative; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -390,15 +390,6 @@ hr {
     filter: grayscale(100%);
     
 }
-
-/* .geotag {
-    position: absolute;
-    top: 40px;
-    left: 600px;
-    width: auto;
-    height: 30px;
-
-} */
 
 #footer {
     display: flex;
