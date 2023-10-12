@@ -296,6 +296,26 @@ hr {
     width: 40%;
 }
 
+#select-barber {
+    color: var(--main-black);
+    width: 100%;
+    height: 25px;
+    background-color: var(--content-bg-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#date-input {
+    color: var(--main-black);
+    width: 100%;
+    background-color: var(--content-bg-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
 .service-select-row {
     padding: 5px 0px;
 }
