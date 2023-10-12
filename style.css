@@ -366,11 +366,11 @@ hr {
 }
 
 #contacts-content h3 {
-    margin: 10px 0px;
+    margin: 10px 20px 10px 0px;
 }
 
 #contacts-content {
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -378,27 +378,27 @@ hr {
 
 
 .contacts-map {
-    width: 300px;
+    width: 100%;
     height: 300px;
     border: solid 1px #000;
     
 }
 
-.contacts-map img {
-    height: 100hv;
+.contacts-map iframe {
+    height: 100%;
     width: 100%;
     filter: grayscale(100%);
     
 }
 
-.geotag {
+/* .geotag {
     position: absolute;
     top: 40px;
     left: 600px;
     width: auto;
     height: 30px;
 
-}
+} */
 
 #footer {
     display: flex;
