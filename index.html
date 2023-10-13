@@ -7,74 +7,99 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="content-box" id="header">
-        <div class="logo">
-            <img src="img/logo.png" alt="Barbershop">
-            <h1>BARBERSHOP</h1>
-        </div>
-        <div>
-            <div class="navigation">
-                <a href="#price"><button onclick="navigation.classList='content-box';backStyle()">УСЛУГИ</button></a>
-                <a href="#team"><button onclick="navigation.classList='content-box';backStyle()">КОМАНДА</button></a>
-                <a href="#contacts"><button onclick="navigation.classList='content-box';backStyle()">КОНТАКТЫ</button></a>
+    <div class="content" id="banner">
+        <div class="header" id="header">
+            <div class="logo">
+                <h1>BARBERSHOP</h1>
             </div>
-            <button class="mobile-menu-button">МЕНЮ</button>
-            <a href=""><button class="close-mobile-menu-button">Закрыть</button></a>
+            <div>
+                <div class="navigation">
+                    <a href="#price"><button onclick="navigation.classList='content';backStyle()">УСЛУГИ</button></a>
+                    <a href="#team"><button onclick="navigation.classList='content';backStyle()">КОМАНДА</button></a>
+                    <a href="#contacts"><button onclick="navigation.classList='content';backStyle()">КОНТАКТЫ</button></a>
+                </div>
+                <button class="mobile-menu-button">&#9868;</button>
+                <a href=""><button class="close-mobile-menu-button">Закрыть</button></a>
+            </div>
         </div>
-        
+        <div class="banner">
+            <div class="banner-title">
+                <h1>ЛУЧШИЙ <br>
+                    БАРБЕРШОП</h1>
+                <p>Стильно! Быстро! С удовольствием!</p>
+            </div>
+            <div id="banner-button-box">
+                <a href="#visit"><button>Записаться</button></a>
+                <p> Ежедневно, 10:00 - 22:00</p>
+            </div>
+        </div>
+        <p  id='banner-arrow-down'>&#8964;</p>
     </div>
-    <div class="content-box" id="banner">
-        <div id="banner-title">
-            <h1>ЛУЧШИЙ <br>
-                БАРБЕРШОП</h1>
-            <p>Стильно! Быстро! С удовольствием!</p>
-        </div>
-        <div id="banner-button-box">
-            <a href="#visit"><button>Записаться</button></a>
-        </div>
+    <div class="content mission">
+        <p><b>Наша миссия</b> - делать красивыми всех вокруг! Любой может выглядеть достойно, независимо от возраста и типа волос.</p>
     </div>
-    
-    <div class="content-box" >
-        <hr>
-        <div id="team-title"><h1>КОМАНДА</h1></div>
-        <div id="team">
-        <div class="personal">
-            <img src="img/barber_andr.jpeg" alt="Барбер Андрей">
-            <div class="personal-title">АНДРЕЙ</div>
-            <div class="personal-subtitle">Мастер своего дела, внимателен к мелочам</div>
-            <button id="barber-visit-button" onclick="selectThisBarber('andrey-barber')">Записаться</button>
-            <div class="top-barber">TOP BARBER</div>
+    <div class="content" id="team">
+        <div class="content-title"><h1>КОМАНДА</h1></div>
+        <div class="team">
+            <div class="personal">
+                <img src="img/barber_andr.jpeg" alt="Барбер Андрей">
+                <div class="personal-title">АНДРЕЙ</div>
+                <div class="personal-subtitle">Мастер своего дела, внимателен к мелочам</div>
+                <button onclick="selectThisBarber('andrey-barber')">Записаться</button>
+                <div class="top-barber">
+                    <img src="./img/star_icon.png" alt="">
+                    <p>TOP BARBER</p>
+                </div>
+            </div>
+            <div class="personal">
+                <img src="img/barber_ser.jpeg" alt="Барбер Сергей">
+                <div class="personal-title">СЕРГЕЙ</div>
+                <div class="personal-subtitle">Профессионал с большой буквы, топ барбер</div>
+                <button onclick="selectThisBarber('sergey-barber')">Записаться</button>
+            </div>
         </div>
-        <div class="personal">
-            <img src="img/barber_ser.jpeg" alt="Барбер Сергей">
-            <div class="personal-title">СЕРГЕЙ</div>
-            <div class="personal-subtitle">Профессионал с большой буквы, топ барбер</div>
-            <button id="barber-visit-button" onclick="selectThisBarber('sergey-barber')">Записаться</button>
-        </div>
-        </div>
+        <div class="team-decor"><img src='./img/decor_1.png' alt=""></div>
     </div>
-    <div class="content-box" id="price">
-        <hr>
-        <h1>УСЛУГИ  И ЦЕНЫ</h1>
+    <div class="content price" id="price">
+        <div class="content-title"><h1>УСЛУГИ  И ЦЕНЫ</h1></div>
         <div class="services-list" id="services"></div>
+        <div class="price-decor"><img src='./img/decor_2.png' alt=""></div>
     </div>
-    <div class="content-box" id="tab">
+    <div class="content" id="tab">
         <div id="tab-links">
             <button class="tab-button" id="deafault-open-tab" onclick="openTab(event, 'haircut')">СТРИЖКА</button>
             <button class="tab-button" onclick="openTab(event, 'styling')">УКЛАДКА</button>
             <button class="tab-button" onclick="openTab(event, 'shave')">БРИТЬЕ</button>
         </div>
         <div class="tab-content" id="haircut">
-            <p>Сегодня стрижка — это основа образа любого современного человека. Особенно это утверждение касается женской половины населения: зачастую именно стрижка для женщины становится первым шагом на пути к собственному преображению и позитивным жизненным переменам. Выбор стрижки состоит в определении оптимальной длины волос, формы причёски, наличия и формы чёлки, и конечно, базовым параметром здесь является длина. Общепринятой в этом смысле считается классификация волос на длинные, короткие и средней длины.</p>
+            <p>Главные секреты барбершопов — профессионализм, инструменты и опыт работы. А также брутальная обстановка, в которой хочется побывать снова и снова. Барберу всегда можно довериться: Вы удивитесь, как стрижка может изменить внешность в лучшую сторону. Большинство парикмахерш из салонов красоты ограничиваются понятиями «бокс» и «ёжик» для мужчин. Да, это дешевле. Но хочется ли Вам быть «как все»? В барбершопе такого никогда не случится. Каждая стрижка у мужского мастера — индивидуальное творение.</p>
+
+            <p>Хотя и есть люди, которые возражают этому: в барбершопе тоже делают одинаковые стрижки. Да, такое бывает. Но лишь потому, что стандартные стрижки популярны среди клиентов. И в этом плане барбершопы выигрывают: если Вы все-таки решитесь на перемены в своем образе, предоставляя волю мастеру в подборе индивидуального стиля, Вы удивитесь огромному сочетанию техник, примененных барбером, инструментов и результату, который точно подойдет Вам.</p>
         </div>
         <div class="tab-content" id="styling">
             <p>Укладка – это способ придать форму и объем волосам с помощью фена и горячих электроинструментов. Все, что предполагает использование дополнительных материалов и аксессуаров: для фиксации, декора, создания формы, – мы называем прической.</p>
+            <p>Несколько советов по укладке волос
+                <li>Начинайте укладку с сушки фоном. Очень важно отслеживать положение локонов во время укладки, поэтому задавайте направление волосам и слегка подкручивайте пряди для создания нужного эффекта.</li>
+                
+                <li>Обязательно используйте текстурирующие спреи, гель или воск. Предварительно разотрите его в ладонях, после чего аккуратно пройдитесь по волосам.</li>
+                
+                <li>Для закрепления укладки используйте небольшое количество лака или специального спрея.</li>
+                
+                <p>Какие средства понадобятся для укладки?</p>
+                <li>Гель для волос — универсальное моделирующее средство, напоминающее желе. С его помощью можно создать элегантный образ или навести легкий беспорядок. Его можно наносить как на влажные, так и на сухие волосы.</li>
+                <li>Воск - подойдет для создания любых укладок, придает волосам эластичность и гладкость.
+                    Глина – используется для фиксации отдельных прядей. Средство растирается пальцами, после чего кончики волос аккуратно подкручиваются.</li>
+                <li>Мусс – используется для создания прикорневого объема. Небольшое количество наносится на влажные волосы, после чего приступают к укладке с помощью фена.</li>
+                <li>Лак – обеспечивает быструю фиксацию, не утяжеляет и не склеивает волосы.</li></p>
         </div>
         <div class="tab-content" id="shave">
-            <p>Бритьё — один из способов принудительного или добровольного удаления волос с головы или тела.</p>
+            <p>Термин «королевское бритьё» непосредственно связан с именем Уильяма Труфита, открывшего свою первую цирюльню в 1805-м году в Лондоне, и впоследствии ставшего основателем марки "truefitt & hill". его заведение заслужило высочайшую репутацию среди английских аристократов и получило признание монархов Великобритании — именно продукция Труфита получила эксклюзивные привилегии королевского двора. Тогда же были заложены основы этой статусной процедуры.</p>
+            <p>Что же необходимо для того, чтобы бритьё стало «королевским»?
+            <li>Во-первых, правильная опасная бритва и барбер, умеющий с ней обращаться. Наши опытные мастера прошли специальное обучение и повышение квалификации по стандартам и правилам "Truefitt & Hill".</li>
+            <li>Во-вторых, мужская косметика премиум-класса от "Truefitt & Hill". Это по-настоящему элитные средства для бритья и ухода за кожей. Масла, мыло и бальзамы высочайшего качества на основе проверенных за два века рецептов, и с применением самых современных технологий.</li></p>
         </div>
     </div>
-    <div class="content-box" id="discount">
+    <div class="content" id="discount">
         <div id="discount-title">
             <h1>ПОЛУЧИТЕ СКИДКУ</h1>
             <h3>Чтобы получить скидку, нажмите на кнопку.</h3>
@@ -88,9 +113,8 @@
             </div> 
         </div>
     </div>
-    <div class='content-box' id="visit">
-        <hr>
-        <h1>ЗАПИСАТЬСЯ</h1>
+    <div class='content' id="visit">
+        <div class="content-title"><h1>ЗАПИСАТЬСЯ</h1></div>
         <div class="visit-content">
             <div id="visit-services">
                 <h3>Выберите мастера</h3>
@@ -129,8 +153,7 @@
             </div>
         </div>
     </div>
-    <div class="content-box" id="accordion">
-        <hr>
+    <div class="content" id="accordion">
         <button class="accordion-button">Нужно ли мыть голову перед стрижкой?</button>
         <div class="accordion-panel">
             <p>
@@ -178,51 +201,55 @@
             </ul>
         </div>
     </div>
-    <div class="content-box" id="contacts">
-        <hr>
-        <h1>КОНТАКТЫ</h1>
+    <div class="content" id="contacts">
+        <div class="content-title"><h1>КОНТАКТЫ</h1></div>
         <div id="contacts-content">
             <div class="contacts-info">
-                <h3>Адрес:</h3>
-                <p>Большой Сухаревский переулок, 14, Москва, 127051</p>
-                <h3>Телефон:</h3>
-                <p>+7 (999) 213 - 34 - 55</p>
-                <h3>Режим работы:</h3>
-                <p>Ежедневно, 10:00 - 22:00</p>               
+                <p>Адрес:</p>
+                <h3>Большой Сухаревский переулок, 14, Москва, 127051</h3>
+                <p>Телефон:</p>
+                <a href="tel:+79992133455"><h3>+7 (999) 213 - 34 - 55</h3></a>
+                <p>Режим работы:</p>
+                <h3>Ежедневно, 10:00 - 22:00</h3>               
             </div>
-            <div class="contacts-map"><img src="./img/map.png" alt=""></div>
+            <div class="contacts-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.9967432376598!2d37.6285912016314!3d55.76971262248228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a6f529313b9%3A0x39d51c62a8256c26!2z0KLQtdCw0YLRgCDQqNC60L7Qu9CwINCU0YDQsNC80LDRgtC40YfQtdGB0LrQvtCz0L4g0JjRgdC60YPRgdGB0YLQstCw!5e0!3m2!1sru!2sru!4v1697118753275!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </div>
-    <div class="content-box" id="footer">
+    <div class="content" id="footer">
         <div class="logo">
-            <img src="img/logo.png" alt="Barbershop">
+            <!-- <img src="img/logo.png" alt="Barbershop"> -->
             <h1>BARBERSHOP</h1>
         </div>
         <div class="footer-links">
             <a href="#banner"><button>Вернуться наверх страницы</button></a>
             <a href="#visit"><button>Записаться</button></a>
             <a href="#team"><button>Команда</button></a>
-            <a href="#price"><button>Услуги</button></a>
+            <a href="#price"><button>Услуги и цены</button></a>
             <a href="#contacts"><button>Контакты</button></a>
         </div>
         <div class="footer-contacts">
-            <h3>Адрес:</h3>
-            <p>Большой Сухаревский переулок, 14, Москва, 127051</p>
-            <h3>Телефон:</h3>
-            <p>+7 (999) 213 - 34 - 55</p>
-            <h3>Режим работы:</h3>
-            <p>Ежедневно, 10:00 - 22:00</p> 
+            <p>Адрес:</p>
+            <h3>Большой Сухаревский переулок, 14, Москва, 127051</h3>
+            <p>Телефон:</p>
+            <a href="tel:+79992133455"><h3>+7 (999) 213 - 34 - 55</h3></a>
+            <p>Режим работы:</p>
+            <h3>Ежедневно, 10:00 - 22:00</h3> 
         </div>
     </div>
     <div class="modal">
         <div class="modal-content">
             <div class="modal-text"></div>
-            <a href="#"><button id="close-modal">X</button></a>
+            <a href="#"><button id="close-modal">&#10539;</button></a>
         </div>
     </div>
     <div class="modal-final">
         <div class="modal-final-content">
-            <div class="modal-text">Успешно!</div>
+            <div class="modal-text">
+                 <h3>&#9988; Успешно!</h3>
+                 <p>Ждем Вас!</p>
+            </div>
         </div>
     </div>
     <script src="index.js"></script>

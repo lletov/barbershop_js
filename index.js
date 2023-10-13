@@ -29,7 +29,9 @@ for (let i=0; i < services.length; i++) {
     let serviceRow =
     `<div class="service-row">
         <p>${services[i].name}</p>
+        <div class="service-row-line"></div>
         <h3>${services[i].price} р.</h3>
+        <img src="./img/scissors.png" alt="">
     </div>`
     servicesBlock.innerHTML += serviceRow
 
@@ -44,7 +46,7 @@ for (let i=0; i < services.length; i++) {
 
 // mobile nav menu
 const header = document.getElementById('header')
-const navigation = document.querySelector('.content-box')
+const navigation = document.querySelector('.header')
 const mobileNavButton = document.querySelector('.mobile-menu-button')
 mobileNavButton.onclick = function (){
     navigation.classList.toggle('mobile');
@@ -212,9 +214,9 @@ function fillModal(){
 
 function openFinalModal() {
     closeModal()
-    document.querySelector('.modal-final').style.display = 'block'
+    document.querySelector('.modal-final').classList.toggle('active')
     setTimeout(() => {
-        document.querySelector('.modal-final').style.display = 'none'
+        document.querySelector('.modal-final.active').className = 'modal-final' 
     }, 5000)
 }
     
