@@ -25,6 +25,11 @@ body {
     box-sizing: border-box;
     max-width: 900px;
     margin: auto;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.83), rgba(255, 255, 255, 1)), url('./img/cartoon-bg.jpg');
+    background-size: auto 100vh ;
+    background-repeat: no-repeat;
+    background-position: top;
+    overflow-x: hidden;
 }
 
 button {
@@ -39,9 +44,6 @@ button:hover {
 }
 
 hr {
-    /* height: 3px;
-    border: none;
-    background-color: var(--main-bg-color); */
     margin: 15px auto;
 }
 
@@ -79,11 +81,11 @@ a:hover {
 
 
 .content {
-    background-color: var(--content-bg-color);
-    margin: 10px;
+    /* background-color: var(--content-bg-color); */
+    /* margin: 10px; */
     padding: 50px;
     max-width: 1100px;
-    box-shadow: 0px 0px 10px var(--shadow-color);
+    /* box-shadow: 0px 0px 10px var(--shadow-color); */
 }
 
 .content-title {
@@ -93,17 +95,26 @@ a:hover {
 }
 
 .banner {
-    position: relative;
     color: var(--main-white-color);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 80vh;
-    background: linear-gradient(210deg, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.89)), url('./img/cartoon-bg.jpg');
-    background-size: cover;
-    background-position: center; 
 }
 
+#banner {
+    position: relative;
+    height: 100vh;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main-black);
+    margin-bottom: 200px;
+    border-bottom: solid 1px var(--main-black);
+}
 
 .banner-title {
     display: flex;
@@ -128,11 +139,13 @@ a:hover {
     color: var(--grey-text);
     margin-top: 10px;
     font-size: 14px;
+    background-color: var(--content-bg-color);
+    padding: 5px;
 }
 
 #banner-arrow-down {
     /* color: var(--content-bg-color); */
-    font-size: 20px;
+    font-size: 36px;
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -144,6 +157,7 @@ a:hover {
 }
 
 .mission {
+    background-color: var(--content-bg-color);
     padding: 100px 50px;
     font-size: 22px;
     line-height: 30px;
@@ -160,11 +174,28 @@ a:hover {
     justify-content: space-between;
     padding-top: 40px;
 }
+#team {
+    position: relative;
+}
+
+.team-decor {
+    filter: invert(98%) sepia(1%) saturate(12%) hue-rotate(142deg) brightness(115%) contrast(89%);
+    position: absolute;
+    top: 40%;
+    right: -100px;
+    rotate: 45deg;
+}
+.team-decor img {
+
+    width: 200px;
+    height: auto;
+}
 
 .personal {
     /* background-color: #cccbcb; */
     width: 350px;
     position: relative;
+    z-index: 2;
 }
 .personal img {
     height: 250px;
@@ -236,6 +267,7 @@ a:hover {
     align-items: center;
     border-top: solid 1px var(--main-dark-color);
     border-bottom: solid 1px var(--main-dark-color);
+    z-index: 3;
 }
 .service-row p {
     min-width: 50px;
@@ -263,9 +295,26 @@ a:hover {
     left: 50%;
 }
 
-/* #tab {
-    height: 500px;
-} */
+#price {
+    position: relative;
+}
+
+.price-decor {
+    filter: invert(98%) sepia(1%) saturate(12%) hue-rotate(142deg) brightness(115%) contrast(89%);
+    position: absolute;
+    top: 40%;
+    left: -100px;
+    rotate: 315deg;
+}
+.price-decor img {
+
+    width: 200px;
+    height: auto;
+}
+
+#tab {
+    height: auto;
+}
 
 #tab-links {
     border-bottom: solid 2px var(--main-black);
@@ -316,7 +365,7 @@ a:hover {
 #discount-offer {
     height: 160px;
     width: 220px;
-    border: dashed 1px var(--main-dark-color);
+    border: dashed 1px var(--main-black);
     font-size: 48px;
     color: var(--main-bg-color);
     display: flex;
@@ -415,7 +464,8 @@ a:hover {
     align-items: center;
 
     margin: auto;
-    width: 400px;
+    max-width: 400px;
+    min-width: 280px;
     max-height: 600px;
     background:#fff;
     border: solid 1px #000;
@@ -576,6 +626,11 @@ a:hover {
     padding: 80px 50px;
     background-color: var(--main-black);
     color: var(--content-bg-color);
+    max-width: 100%;
+}
+
+#footer a {
+    color: var(--content-bg-color);
 }
 
 .footer-links {
@@ -586,12 +641,12 @@ a:hover {
 }
 
 .footer-links button {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--main-black);
+    color: var(--content-bg-color);
     padding: 2px;
     margin: 3px;
     border: none;
-    border-bottom: solid 1px #fff;
+    border-bottom: solid 1px var(--main-bg-color);
 }
 
 .footer-contacts {
@@ -602,52 +657,8 @@ a:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #000;
-    color: #fff;
-    margin-bottom: 5px;
-}
-.content-box.mobile {
+.header.mobile {
+    background-color: var(--content-bg-color);
     position: fixed;
     top: 0px;
     left: 0px;
@@ -658,17 +669,22 @@ a:hover {
     flex-direction: column;
     row-gap: 30px;
 }
-.content-box.mobile .navigation {
+
+.header.mobile .navigation {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
 }
+.header.mobile .logo {
+    margin-top: 20px;
+}
 
-.content-box.mobile .mobile-menu-button {
+.header.mobile .mobile-menu-button {
     display: none;
 }
-.content-box.mobile .close-mobile-menu-button {
+.header.mobile .close-mobile-menu-button {
     display: block;
     position: fixed;
     top: 20px;
@@ -696,50 +712,66 @@ a:hover {
 
 .navigation button {
     border: none;
-    border-bottom: solid 2px #fff;
-    background-color: #000;
-    color: #fff;
+    margin-left: 15px;
+    padding: 3px;
 }
 
 .navigation button:hover {
-    border-bottom: solid 2px var(--main-accent-color);
+    text-decoration: underline;
 }
 
 .mobile-menu-button {
     display: none;
     border: none;
-    border-bottom: solid 2px #fff;
-    background-color: #000;
-    color: #fff;
+    border-bottom: solid 2px var(--main-bg-color);
+    background-color: var(--main-black);
+    color: var(--main-bg-color);
+}
+.mobile-menu-button:hover {
+    background-color: var(--grey-text);
 }
 
 .close-mobile-menu-button {
     display: none;
     border: none;
-    border-bottom: solid 2px #fff;
-    background-color: #000;
-    color: #fff;
+    border-bottom: solid 2px var(--main-bg-color);
+    background-color: var(--main-black);
+    color: var(--main-bg-color);
+}
+
+.close-mobile-menu-button:hover {
+    background-color: var(--grey-text);
 }
 
 
 
 @media screen and (max-width: 880px) {
+    .content {
+        padding: 25px;
+    }
+
     .mobile-menu-button {
         display: block;
     }
     .navigation {
         display: none;
     }
-    #banner {
+    .banner {
         flex-direction: column;
     }
-    #banner-title {
+    .banner-title {
         text-align: center;
+        margin-bottom: 100px;
     }
-    #team {
+    .team {
         flex-direction: column;
         align-items: center;
     }
+    .team button {
+        left: 140px;
+        width: 120px;
+    }
+
     .personal {
         width: auto;
         margin-bottom: 30px;
@@ -761,10 +793,24 @@ a:hover {
         left: 140px;
     }
     .service-row {
-        margin: 15px 25px;
+        margin: 15px 0px;
     }
-    #tab {
-        height: 370px;
+
+    .service-row img {
+        display: none;
+    }
+
+    .service-row p {
+        font-size: 16px;
+    }
+    
+    .service-row h3 {
+        font-size: 20px;
+    }
+
+    #tab button{
+        font-size: 14px;
+        padding: auto 3px;
     }
 
     #discount {
@@ -772,15 +818,9 @@ a:hover {
         text-align: center;
     }
     #discount-offer {
-        margin: 20px;
+        margin-top: 50px;
     }
-    #discount-offer-height {
-        height: 110px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+
     .visit-content {
         flex-direction: column;
         align-items: center;
@@ -793,9 +833,8 @@ a:hover {
         padding: 10px 0px;
     }
     #visit-person {
-        width: auto;
-        max-width: 300px;
-        margin: 0px 20px;
+        margin-top: 30px;
+        width: 100%;
     }
     #contacts-content {
         flex-direction: column;
@@ -809,11 +848,8 @@ a:hover {
         flex-direction: column;
         gap: 30px;
     }
-}
-
-
-@media screen and (max-width: 570px) {
-    #tab {
-        height: 570px;
+    .footer-links {
+        margin-left: 0px;
     }
 }
+

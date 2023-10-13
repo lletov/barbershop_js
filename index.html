@@ -7,31 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- <div class="content-box" id="header">
-        <div class="logo">
-            <img src="img/logo.png" alt="Barbershop">
-            <h1>BARBERSHOP</h1>
-        </div>
-        <div>
-            <div class="navigation">
-                <a href="#price"><button onclick="navigation.classList='content-box';backStyle()">УСЛУГИ</button></a>
-                <a href="#team"><button onclick="navigation.classList='content-box';backStyle()">КОМАНДА</button></a>
-                <a href="#contacts"><button onclick="navigation.classList='content-box';backStyle()">КОНТАКТЫ</button></a>
+    <div class="content" id="banner">
+        <div class="header" id="header">
+            <div class="logo">
+                <h1>BARBERSHOP</h1>
             </div>
-            <button class="mobile-menu-button">МЕНЮ</button>
-            <a href=""><button class="close-mobile-menu-button">Закрыть</button></a>
+            <div>
+                <div class="navigation">
+                    <a href="#price"><button onclick="navigation.classList='content';backStyle()">УСЛУГИ</button></a>
+                    <a href="#team"><button onclick="navigation.classList='content';backStyle()">КОМАНДА</button></a>
+                    <a href="#contacts"><button onclick="navigation.classList='content';backStyle()">КОНТАКТЫ</button></a>
+                </div>
+                <button class="mobile-menu-button">&#9868;</button>
+                <a href=""><button class="close-mobile-menu-button">Закрыть</button></a>
+            </div>
         </div>
-        
-    </div> -->
-    <div class="content banner" id="banner">
-        <div class="banner-title">
-            <h1>ЛУЧШИЙ <br>
-                БАРБЕРШОП</h1>
-            <p>Стильно! Быстро! С удовольствием!</p>
-        </div>
-        <div id="banner-button-box">
-            <a href="#visit"><button>Записаться</button></a>
-            <p> Ежедневно, 10:00 - 22:00</p>
+        <div class="banner">
+            <div class="banner-title">
+                <h1>ЛУЧШИЙ <br>
+                    БАРБЕРШОП</h1>
+                <p>Стильно! Быстро! С удовольствием!</p>
+            </div>
+            <div id="banner-button-box">
+                <a href="#visit"><button>Записаться</button></a>
+                <p> Ежедневно, 10:00 - 22:00</p>
+            </div>
         </div>
         <p id='banner-arrow-down'>&#8964;</p>
     </div>
@@ -58,10 +58,12 @@
                 <button onclick="selectThisBarber('sergey-barber')">Записаться</button>
             </div>
         </div>
+        <div class="team-decor"><img src='./img/decor_1.png' alt=""></div>
     </div>
     <div class="content price" id="price">
         <div class="content-title"><h1>УСЛУГИ  И ЦЕНЫ</h1></div>
         <div class="services-list" id="services"></div>
+        <div class="price-decor"><img src='./img/decor_2.png' alt=""></div>
     </div>
     <div class="content" id="tab">
         <div id="tab-links">
@@ -97,7 +99,7 @@
             <li>Во-вторых, мужская косметика премиум-класса от "Truefitt & Hill". Это по-настоящему элитные средства для бритья и ухода за кожей. Масла, мыло и бальзамы высочайшего качества на основе проверенных за два века рецептов, и с применением самых современных технологий.</li></p>
         </div>
     </div>
-    <div class="content discount">
+    <div class="content" id="discount">
         <div id="discount-title">
             <h1>ПОЛУЧИТЕ СКИДКУ</h1>
             <h3>Чтобы получить скидку, нажмите на кнопку.</h3>

@@ -45,18 +45,18 @@ for (let i=0; i < services.length; i++) {
 }
 
 // mobile nav menu
-// const header = document.getElementById('header')
-// const navigation = document.querySelector('.content-box')
-// const mobileNavButton = document.querySelector('.mobile-menu-button')
-// mobileNavButton.onclick = function (){
-//     navigation.classList.toggle('mobile');
-//     header.style.flexDirection = 'column';
-//     header.style.justifyContent = 'start';
-// }
-// function backStyle(){
-//     header.style.flexDirection = 'row';
-//     header.style.justifyContent = 'space-between';
-// }
+const header = document.getElementById('header')
+const navigation = document.querySelector('.header')
+const mobileNavButton = document.querySelector('.mobile-menu-button')
+mobileNavButton.onclick = function (){
+    navigation.classList.toggle('mobile');
+    header.style.flexDirection = 'column';
+    header.style.justifyContent = 'start';
+}
+function backStyle(){
+    header.style.flexDirection = 'row';
+    header.style.justifyContent = 'space-between';
+}
 
 // select barber
 const barberSelector = document.getElementById('select-barber')
@@ -214,10 +214,9 @@ function fillModal(){
 
 function openFinalModal() {
     closeModal()
-    // document.querySelector('.modal-final').style.display = 'block'
     document.querySelector('.modal-final').classList.toggle('active')
     setTimeout(() => {
-        document.querySelector('.modal-final').style.display = 'none'
+        document.querySelector('.modal-final.active').className = 'modal-final' 
     }, 5000)
 }
     
