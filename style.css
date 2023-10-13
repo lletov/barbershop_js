@@ -65,6 +65,10 @@ a:hover {
     color: var(--main-black);
 }
 
+a:visited {
+    color:  var(--main-black);
+}
+
 #loader {
     border: 5px solid #f3f3f3; /* Light grey */
     border-top: 5px solid var(--main-black); 
