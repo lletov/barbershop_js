@@ -343,7 +343,7 @@ a:hover {
     border: none;
 }
 
-.discount {
+#discount {
     height: 500px;
     display: flex;
     justify-content: space-around;
@@ -814,7 +814,9 @@ a:hover {
     }
 
     #discount {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         text-align: center;
     }
     #discount-offer {
