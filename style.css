@@ -17,13 +17,15 @@
     scroll-behavior: smooth;
     --screen: 900px;
 }
+html {
+    overflow-x: hidden;
+}
 
 body {
     background-color: var(--main-bg-color);
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     box-sizing: border-box;
-    max-width: 900px;
     margin: auto;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.83), rgba(255, 255, 255, 1)), url('./img/cartoon-bg.jpg');
     background-size: auto 100vh ;
@@ -82,9 +84,9 @@ a:hover {
 
 .content {
     /* background-color: var(--content-bg-color); */
-    /* margin: 10px; */
+    margin: 10px auto;
     padding: 50px;
-    max-width: 1100px;
+    max-width: 900px;
     /* box-shadow: 0px 0px 10px var(--shadow-color); */
 }
 
@@ -144,16 +146,16 @@ a:hover {
 }
 
 #banner-arrow-down {
-    /* color: var(--content-bg-color); */
     font-size: 36px;
     position: absolute;
     bottom: 30px;
-    left: 50%;
+    width: 100%;
+    left: 47%;
     animation: top-down ease-out 0.7s infinite alternate;
 }
 @keyframes top-down {
-    from {height: 2%}
-    to {height: 5%}
+    from {height: 5%}
+    to {height: 8%}
 }
 
 .mission {
@@ -809,7 +811,7 @@ a:hover {
     }
 
     #tab button{
-        font-size: 14px;
+        font-size: 12px;
         padding: auto 3px;
     }
 
