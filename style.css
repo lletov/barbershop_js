@@ -153,8 +153,8 @@ a:visited {
     font-size: 36px;
     position: absolute;
     bottom: 30px;
-    width: 100%;
-    left: 47%;
+    left: 50%;
+    transform: translate(-50%, 0);
     animation: top-down ease-out 0.7s infinite alternate;
 }
 @keyframes top-down {
