@@ -28,7 +28,7 @@ body {
     box-sizing: border-box;
     margin: auto;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.83), rgba(255, 255, 255, 1)), url('./img/cartoon-bg.jpg');
-    background-size: auto 100vh ;
+    background-size: 100% 100vh ;
     background-repeat: no-repeat;
     background-position: top;
     overflow-x: hidden;
@@ -43,6 +43,7 @@ button {
 button:hover {
     cursor: pointer;
     background-color: var(--button-hover-color);
+    transition: 0.3s;
 }
 
 hr {
@@ -476,7 +477,6 @@ a:visited {
     background:#fff;
     border: solid 1px #000;
     padding: 60px 30px 20px 30px;
-    
 }
 
 .modal-content h2 {
