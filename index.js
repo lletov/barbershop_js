@@ -150,7 +150,7 @@ for (let i = 0; i < accordion.length; i++) {
 
 // modal
 const modal = document.querySelector('.modal')
-const modalContent = document.querySelector('modal-content')
+const modalContent = document.querySelector('.modal-content')
 const openModalBtn = document.getElementById('create-visit')
 const closeModalBtn = document.getElementById('close-modal')
 
