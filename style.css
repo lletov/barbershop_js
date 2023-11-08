@@ -28,7 +28,9 @@ a {
 }
 
 .screen {
-    max-width: 1200px;
+    max-width: 1020px;
+    margin: auto;
+    padding: 75px 10px;
 }
 
 .banner {
@@ -36,4 +38,95 @@ a {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('./img/banner-bg.jpeg');
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 167px;
+    text-align: center;
+}
+
+.logo h1 {
+    color: var(--light-grey);
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.logo p {
+    color: var(--light-grey);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    padding-left: 6px;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.online-marker {
+    display: flex;
+    align-items: center;
+}
+
+.online-marker p {
+    margin-left: 5px;
+    color: var(--light-grey);
+    font-weight: 200;
+}
+
+.marker {
+    background-color: var(--main-green);
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+}
+
+.phone {
+    color: var(--light-grey);
+    font-size: 26px;
+}
+
+.burger-menu {
+    border: none;
+    background-color: transparent ;
+}
+
+.banner-cta {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-title p {
+    color: var(--light-grey);
+    font-family: 'Prata', serif;
+    font-size: 66px;
+}
+
+.banner-btn {
+    color: var(--light-grey);
+    background-color: transparent;
+    border: solid var(--light-grey) 1px;
+    width: 200px;
+    height: 50px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-right: 100px;
+}
+
+.scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, 0);
 }
