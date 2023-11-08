@@ -129,4 +129,23 @@ a {
     left: 50%;
     bottom: 30px;
     transform: translate(-50%, 0);
+    animation: top-down ease-out 0.7s infinite alternate 5s;
+}
+@keyframes top-down {
+    from {bottom: 5%}
+    to {bottom: 8%}
+}
+
+.mission {
+    margin-top: 50px;
+    font-size: 41px;
+    text-align: right;
+}
+
+.mission-counter {
+    margin-top: 150px;
+}
+
+.mission-sub {
+    font-size: 41px;
 }
