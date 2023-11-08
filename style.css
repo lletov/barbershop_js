@@ -27,6 +27,16 @@ a {
     text-decoration: none;
 }
 
+button:hover {
+    background-color: var(--main-white);
+    border: solid var(--main-black) 1px;
+    transition: 0.3s;
+}
+
+button:focus {
+    border: solid var(--main-black) 1px;
+}
+
 .screen {
     max-width: 1020px;
     margin: auto;
@@ -156,7 +166,7 @@ a {
 
 .team {
     display: flex;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 }
 
 .barber-card {
