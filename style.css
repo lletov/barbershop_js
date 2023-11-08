@@ -149,3 +149,47 @@ a {
 .mission-sub {
     font-size: 41px;
 }
+
+.team-title {
+    margin-bottom: 52px;
+}
+
+.team {
+    display: flex;
+    margin-bottom: 120px;
+}
+
+.barber-card {
+    max-width: 600px;
+    position: relative;
+}
+
+.barber-card img {
+    max-width: 510px;
+    min-width: 250px;
+}
+
+.barber-card h1 {
+    position: absolute;
+    background-color: var(--light-grey);
+    font-size: 26px;
+    right: 25px;
+    bottom: 117px;
+}
+
+.barber-card p {
+    position: absolute;
+    background-color: var(--light-grey);
+    max-width: 200px;
+    text-align: right;
+    right: 25px;
+    bottom: 75px;
+}
+
+.barber-card button {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 200px;
+    height: 40px;
+}
