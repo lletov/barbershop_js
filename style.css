@@ -181,7 +181,7 @@ button:focus {
 }
 
 .barber-card img {
-    max-width: 510px;
+    max-width: 100%;
     min-width: 250px;
 }
 
