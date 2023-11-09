@@ -263,4 +263,34 @@ button:focus {
 .selects {
     display: flex;
     justify-content: space-between;
+    margin-top: 120px;
+}
+
+.selects h1 {
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.total-str {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.total-str p {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.total-box {
+    display: flex;
+    padding: 0px;
+}
+
+.total-box h1 {
+    font-family: 'Prata', serif;
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0px 5px 0px 0px;
 }

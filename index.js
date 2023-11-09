@@ -8,42 +8,43 @@ let services = [{
     time: 45,
     category: 'hair'
 }, {
-    id: 0,
+    id: 1,
     name: 'Стрижка FADE',
     price: 2200,
     time: 45,
     category: 'hair'
 }, {
+    id: 2,
     name: 'Стрижка машинкой',
     price: 950,
     time: 25,
     category: 'hair'
 }, {
-    id: 0,
+    id: 3,
     name: 'Моделирование бороды',
     price: 1400,
     time: 35,
     category: 'beard'
 }, {
-    id: 0,
+    id: 4,
     name: 'Стрижка усов и бороды',
     price: 900,
     time: 30,
     category: 'beard'
 }, {
-    id: 0,
+    id: 5,
     name: 'Опасное бритье',
     price: 1700,
     time: 40,
     category: 'beard'
 }, {
-    id: 0,
+    id: 6,
     name: 'Мужская стрижка + стрижка усов и бороды',
     price: 2800,
     time: 85,
     category: 'complex'
 }, {
-    id: 0,
+    id: 7,
     name: 'Стрижка машинкой + опасное бритье',
     price: 2100,
     time: 65,
@@ -96,3 +97,11 @@ function openTab (evt, tabName) {
 }
 // open default tab
 document.getElementById('deafault-open-tab').click();
+
+// render selects 
+
+let selectServices = document.getElementById('select-service')
+for (let i=0; i < services.length; i++) {
+    selectServices.innerHTML +=
+    `<option value="${services[i].id}">${services[i].name}</option>`
+}
