@@ -203,3 +203,51 @@ button:focus {
     width: 200px;
     height: 40px;
 }
+
+#tab-links {
+    margin: 90px 0px;
+}
+
+.tab-button {
+    padding: 10px 0px;
+    font-size: 26px;
+    font-weight: 300;
+    color: var(--main-black);
+    border: none;
+    background-color: var(--main-white);
+    margin-right: 70px;
+}
+
+.tab-button:hover {
+    cursor: pointer;
+    border: none;
+}
+
+.tab-button.active {
+    cursor: auto;
+    border: none;
+    font-weight: 300;
+}
+
+.tab-str {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-str h1 {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.tab-str h2 {
+    font-size: 26px;
+    font-weight: 300;
+    color: var(--main-grey);
+    margin-left: 200px;
+}
+
+.tab-str p {
+    font-size: 26px;
+    font-weight: 300;
+}
