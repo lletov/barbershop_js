@@ -424,9 +424,57 @@ select {
     gap: 20px;
 }
 
-
-
 #map {
     width: 50%;
     background-color: #bbb;
+}
+
+#accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-button {
+    font-size: 26px;
+    font-weight: 300;
+    text-align: left;
+    position: relative;
+    padding: 20px 50px 20px 0px;
+    border: none;
+    border-bottom: solid 1px var(--main-black);
+}
+
+.accordion-button::before {
+    content: '\221F';
+    font-size: 24px;
+    margin: 3px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    rotate: -45deg;
+    transition: 0.5s rotate;
+} 
+
+.accordion-button.active::before {
+    rotate: 135deg;
+}
+
+.accordion-panel {
+    margin: 20px 0px 10px 0px;
+    text-align: justify;
+    display: none;
+    max-height: 0;
+    transition: 0.4s;
+    overflow: hidden;
+    line-height: 1.7;
+}
+
+.accordion-panel ul {
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.accordion-panel ul li {
+    margin: 10px 0px;
 }
