@@ -105,3 +105,25 @@ for (let i=0; i < services.length; i++) {
     selectServices.innerHTML +=
     `<option value="${services[i].id}">${services[i].name}</option>`
 }
+
+// accordion
+let accordion = document.getElementsByClassName('accordion-button');
+
+for (let i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener('click', function() {
+        let panel = this.nextElementSibling;
+        if (panel.style.display === 'block') {
+            panel.style.display = 'none'
+            accordion[i].className = accordion[i].className.replace(' active', '')
+        } else {
+            panel.style.display = 'block'
+            accordion[i].className = accordion[i].className += ' active'
+        }
+        
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+    })
+}

@@ -39,9 +39,9 @@ button:hover {
     transition: 0.3s;
 }
 
-button:focus {
+/* button:focus {
     border: solid var(--main-black) 1px;
-}
+} */
 
 .screen {
     max-width: 1020px;
@@ -381,6 +381,7 @@ select {
 }
 
 .contacts-info {
+    width: 400px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -434,14 +435,22 @@ select {
     flex-direction: column;
 }
 
+.faq-title {
+    margin-bottom: 100px;
+}
+
 .accordion-button {
+    width: 100%;
     font-size: 26px;
-    font-weight: 300;
     text-align: left;
     position: relative;
     padding: 20px 50px 20px 0px;
     border: none;
-    border-bottom: solid 1px var(--main-black);
+}
+
+.accordion-button:hover {
+    border: none;
+    cursor: pointer;
 }
 
 .accordion-button::before {
@@ -454,6 +463,11 @@ select {
     rotate: -45deg;
     transition: 0.5s rotate;
 } 
+
+
+.accordion-button.active {
+    border: none;
+}
 
 .accordion-button.active::before {
     rotate: 135deg;
@@ -477,4 +491,68 @@ select {
 
 .accordion-panel ul li {
     margin: 10px 0px;
+}
+
+.footer {
+    background-color: var(--main-black);
+    color: var(--light-grey);
+}
+
+.footer h5 {
+    font-size: 10px;
+    font-weight: 300;
+    line-height: calc(10px*1.2);
+}
+
+.footer h2 {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.footer img {
+    height: 70px;
+}
+
+.footer a {
+    color: var(--light-grey);
+}
+
+.footer-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.copyright {
+    width: 200px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.disp-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-contacts {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.footer h2 {
+    color: var(--main-grey);
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 15px;
 }
