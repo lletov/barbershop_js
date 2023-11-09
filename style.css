@@ -363,3 +363,10 @@ select {
 .selects-pers button:hover {
     cursor: pointer;
 }
+
+#name-counter {
+    position:relative;
+    left: 300px;
+    top: -35px;
+    color: var(--main-grey);
+}
