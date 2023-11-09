@@ -258,5 +258,9 @@ button:focus {
     font-weight: 300;
     text-align: right;
     width: 100px;
+}
 
+.selects {
+    display: flex;
+    justify-content: space-between;
 }
