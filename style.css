@@ -204,6 +204,10 @@ button:focus {
     height: 40px;
 }
 
+.services {
+    padding-bottom: 150px;
+}
+
 #tab-links {
     margin: 90px 0px;
 }
@@ -233,21 +237,26 @@ button:focus {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .tab-str h1 {
     font-size: 26px;
     font-weight: 300;
+    width: 500px;
+    line-height: 26*1.2;
 }
 
 .tab-str h2 {
     font-size: 26px;
     font-weight: 300;
     color: var(--main-grey);
-    margin-left: 200px;
 }
 
 .tab-str p {
     font-size: 26px;
     font-weight: 300;
+    text-align: right;
+    width: 100px;
+
 }

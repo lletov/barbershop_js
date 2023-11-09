@@ -44,13 +44,40 @@ let services = [{
     category: 'complex'
 }, {
     id: 0,
-    name: 'Стрижка машинкой и опасное бритье',
+    name: 'Стрижка машинкой + опасное бритье',
     price: 2100,
     time: 65,
     category: 'complex'
 }]
 
-// render place ???
+let hairServices = document.getElementById('hair')
+let beardServices = document.getElementById('beard')
+let complexServices = document.getElementById('complex')
+
+function tabStr(i) {
+    return (
+        `
+    <div class="tab-str">
+        <h1>${services[i].name}</h1>
+        <h2>${services[i].time} мин.</h2>
+        <p>${services[i].price} ₽</p>
+    </div>
+    `
+    )
+} 
+    
+for (let i=0; i < services.length; i++) {
+    if (services[i].category === 'hair') {
+        hairServices.innerHTML += tabStr(i)
+    }
+    else if (services[i].category === 'beard') {
+        beardServices.innerHTML += tabStr(i)
+    }
+    else if (services[i].category === 'complex') {
+        complexServices.innerHTML += tabStr(i)
+    }
+}
+
 
 // tab 
 function openTab (evt, tabName) {
