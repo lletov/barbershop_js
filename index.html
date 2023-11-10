@@ -66,7 +66,6 @@
                 <button class="tab-button" onclick="openTab(event, 'beard')">БОРОДА И БРИТЬЕ</button>
                 <button class="tab-button" onclick="openTab(event, 'complex')">КОМПЛЕКС</button>
             </div>
-            <div class="tab-line"></div>
             <div class="tab-content" id="hair"></div>
             <div class="tab-content" id="beard"></div>
             <div class="tab-content" id="complex"></div>
@@ -121,7 +120,9 @@
                     </div>
                     <button id="create-visit">ЗАПИСАТЬСЯ</button>
                     <!-- <p id="not-all-fields">Пожалуйста, заполните все поля.</p> -->
+                </div>
             </div>
+            <div class="visit-line"></div>
         </div>
     </div>
     <div class="screen">
@@ -141,13 +142,13 @@
                         <h2>Режим работы</h2>
                         <h1>Ежедневно, 10:00 - 20:00</h1>
                         <div class="days">
-                            <div class="day">пн</div>
-                            <div class="day">вт</div>
-                            <div class="day">ср</div>
-                            <div class="day">чт</div>
-                            <div class="day">пт</div>
-                            <div class="day">сб</div>
-                            <div class="day">вс</div>
+                            <div class="day" id="mon">пн</div>
+                            <div class="day" id="tue">вт</div>
+                            <div class="day" id="wed">ср</div>
+                            <div class="day" id="thu">чт</div>
+                            <div class="day" id="fri">пт</div>
+                            <div class="day" id="sat">сб</div>
+                            <div class="day" id="sun">вс</div>
                         </div>
                         <div class="online-marker" style="margin-top: 15px;">
                             <div class="marker"></div>

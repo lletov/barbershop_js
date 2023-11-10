@@ -106,6 +106,50 @@ for (let i=0; i < services.length; i++) {
     `<option value="${services[i].id}">${services[i].name}</option>`
 }
 
+// today
+const d = new Date();
+let today = d.getDay();
+let time = d.toLocaleTimeString('en-US', { hour12: false, 
+    hour: "numeric", 
+    minute: "numeric"});
+if (today == 1) {
+    document.getElementById('mon').style.backgroundColor = '#FAD9FB'
+} else if (today == 2) {
+    document.getElementById('tue').style.backgroundColor = '#FAD9FB'
+} else if (today == 3) {
+    document.getElementById('wed').style.backgroundColor = '#FAD9FB'
+} else if (today == 4) {
+    document.getElementById('thu').style.backgroundColor = '#FAD9FB'
+} else if (today == 5) {
+    document.getElementById('fri').style.backgroundColor = '#FAD9FB'
+} else if (today == 6) {
+    document.getElementById('sat').style.backgroundColor = '#FAD9FB'
+} else if (today == 7) {
+    document.getElementById('sun').style.backgroundColor = '#FAD9FB'
+}
+
+// time
+let times = document.querySelectorAll('.online-marker')
+times.forEach((t) => {
+    if (time > '10:00' && time < '20:00'){
+        t.querySelector('p').innerText = 'Сейчас работаем'
+        t.querySelector('.marker').style.backgroundColor = '#05FF00'
+    }
+    else {
+        t.querySelector('p').innerText = 'Сейчас не работаем'
+        t.querySelector('.marker').style.backgroundColor = '#ff1100'
+    }
+    console.log(t.querySelector('p').innerText)
+    console.log(t.querySelector('.marker'))
+})
+
+
+
+console.log(today, time)
+console.log(time < '13:32')
+
+
+
 // accordion
 let accordion = document.getElementsByClassName('accordion-button');
 

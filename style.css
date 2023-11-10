@@ -387,6 +387,10 @@ select {
     color: var(--main-grey);
 }
 
+.selects-pers {
+    z-index: 1;
+}
+
 .selects-pers button {
     width: 350px;
     height: 70px;
@@ -403,11 +407,24 @@ select {
     cursor: pointer;
 }
 
+.visit-line {
+    width: 390px;
+    height: 100px;
+    background-color: var(--accent-color);
+    position: relative;
+    top: -180px;
+    left: 600px;
+    rotate: -3deg;
+    opacity: 0.5;
+    z-index: 0;
+}
+
 #name-counter {
     position:relative;
     left: 300px;
     top: -35px;
     color: var(--main-grey);
+    width: 50px;
 }
 
 .contacts-title {
