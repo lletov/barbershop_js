@@ -140,6 +140,23 @@ button:hover {
     margin-right: 100px;
 }
 
+.banner-line {
+    width: 400px;
+    height: 80px;
+    background-color: var(--accent-color);
+    position: relative;
+    top: -70px;
+    left: 25px;
+    rotate: -3deg;
+    opacity: 0.5;
+    animation: draw-banner-line 0.9s;
+}
+
+@keyframes draw-banner-line {
+    from {width: 0px;}
+    to {width: 400px;}
+}
+
 .scroll-down {
     position: absolute;
     left: 50%;
@@ -215,7 +232,9 @@ button:hover {
 }
 
 #tab-links {
+    position: relative;
     margin: 90px 0px;
+    z-index: 2;
 }
 
 .tab-button {
@@ -224,7 +243,6 @@ button:hover {
     font-weight: 300;
     color: var(--main-black);
     border: none;
-    background-color: var(--main-white);
     margin-right: 70px;
 }
 
@@ -238,6 +256,27 @@ button:hover {
     border: none;
     font-weight: 300;
 }
+
+.tab-button.active::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 60px;
+    background-color: var(--accent-color);
+    position: relative;
+    top: 40px;
+    left: 0px;
+    rotate: -3deg;
+    opacity: 0.5;
+    animation: draw-tab-line 0.3s;
+}
+
+@keyframes draw-tab-line {
+    from {width: 0px;}
+    to {width: 100px;}
+}
+
+
 
 .tab-str {
     width: 100%;
