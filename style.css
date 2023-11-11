@@ -40,10 +40,6 @@ button:hover {
     transition: 0.3s;
 }
 
-/* button:focus {
-    border: solid var(--main-black) 1px;
-} */
-
 .screen {
     max-width: 1020px;
     margin: auto;
@@ -169,6 +165,14 @@ button:hover {
     font-weight: 100;
     letter-spacing: 1px;
     margin-right: 100px;
+    transition: 0.5s;
+}
+
+.banner-btn:hover {
+    cursor: pointer;
+    border: solid var(--light-grey) 1px;
+    background-color: #4e4e4e;
+    transition: 0.3s;
 }
 
 .banner-line {
@@ -252,10 +256,15 @@ button:hover {
 
 .barber-card button {
     position: absolute;
+    background-color: var(--light-grey);
     right: 25px;
     bottom: 25px;
     width: 200px;
     height: 40px;
+}
+
+.barber-card button:hover {
+    cursor: pointer;
 }
 
 .services {
