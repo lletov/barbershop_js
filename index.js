@@ -26,7 +26,13 @@ burgerMenuLinks.forEach((l) => {l.onclick = function(){
     changeBurgerBtnImg()
 }})
 
-
+// select barber
+const barberSelector = document.getElementById('select-barber')
+barberSelector.value = ''
+function selectThisBarber(barber) {
+    barberSelector.value = barber
+    document.getElementById('visit').scrollIntoView()
+}
 
 // render services from list
 let services = [{
