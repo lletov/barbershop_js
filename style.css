@@ -116,6 +116,26 @@ button:hover {
     background-color: transparent ;
 }
 
+.burger-menu:hover {
+    border: none;
+    cursor: pointer;
+}
+
+.burger-menu-modal {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 140px;
+    right: 10px;
+    gap: 12px;
+    align-items: end;
+}
+
+.burger-menu-modal a {
+    color: var(--light-grey);
+}
+
+
 .banner-cta {
     margin-top: 150px;
     display: flex;
