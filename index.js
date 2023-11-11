@@ -169,6 +169,9 @@ for (let i=0; i < services.length; i++) {
 }
 
 let selectedService = document.getElementById('select-service')
+function changeValue(id){
+
+}
 
 
 
