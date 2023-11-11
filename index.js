@@ -3,9 +3,30 @@ console.log('index.js connected')
 // modal burger button menu
 let burgerButton = document.querySelector('.burger-menu')
 let burgerMenu = document.querySelector('.burger-menu-modal')
-burgerButton.onclick = function(){
-    burgerMenu.classList.toggle('visible')
+let burgerButtonImg = burgerButton.querySelector('img')
+let burgerMenuShow = false
+
+burgerButton.onclick = function(){(
+    burgerMenu.classList.toggle('visible'), 
+    changeBurgerBtnImg()
+)}
+
+function changeBurgerBtnImg(){
+    if (burgerMenuShow) {
+        burgerButtonImg.setAttribute('src', './img/icons/burger-menu.svg')
+    } else {
+        burgerButtonImg.setAttribute('src', './img/icons/close.svg')
+    }
+    burgerMenuShow = !burgerMenuShow
 }
+
+let burgerMenuLinks = document.querySelectorAll('.burger-menu-modal a')
+burgerMenuLinks.forEach((l) => {l.onclick = function(){
+    burgerMenu.classList.toggle('visible'), 
+    changeBurgerBtnImg()
+}})
+
+
 
 // render services from list
 let services = [{
@@ -146,16 +167,7 @@ times.forEach((t) => {
         t.querySelector('p').innerText = 'Сейчас не работаем'
         t.querySelector('.marker').style.backgroundColor = '#ff1100'
     }
-    console.log(t.querySelector('p').innerText)
-    console.log(t.querySelector('.marker'))
 })
-
-
-
-console.log(today, time)
-console.log(time < '13:32')
-
-
 
 // accordion
 let accordion = document.getElementsByClassName('accordion-button');

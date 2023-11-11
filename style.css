@@ -10,6 +10,7 @@
     --light-grey: #f1f1f1;
     --main-white: #fff;
     --main-green: #05FF00;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -86,6 +87,7 @@ button:hover {
     display: flex;
     align-items: center;
     gap: 30px;
+    position: relative;
 }
 
 .online-marker {
@@ -116,6 +118,11 @@ button:hover {
     background-color: transparent ;
 }
 
+.burger-menu img {
+    width: 20px;
+    height: 20px;
+}
+
 .burger-menu:hover {
     border: none;
     cursor: pointer;
@@ -125,8 +132,8 @@ button:hover {
     display: none;
     position: absolute;
     flex-direction: column;
-    top: 140px;
-    right: 10px;
+    top: 50px;
+    right: 0px;
     gap: 12px;
     align-items: end;
 }

@@ -7,7 +7,7 @@
     <title>GARSON Barbershop</title>
 </head>
 <body>
-    <div class="banner">
+    <div class="banner" id="banner">
         <div class="screen">
             <div class="header">
                 <div class="logo">
@@ -21,6 +21,12 @@
                     </div>
                     <a href="tel:+79990543411" class="phone">+7 (999) 054 - 34 -11</a>
                     <button class="burger-menu"><img src="./img/icons/burger-menu.svg" alt="menu"></button>
+                    <div class="burger-menu-modal">
+                        <a href="#team">Команда</a>
+                        <a href="#services">Услуги и цены</a>
+                        <a href="#visit">Записаться</a>
+                        <a href="#contacts">Контакты</a>
+                    </div>
                 </div>
             </div>
             <div class="banner-cta">
@@ -34,19 +40,13 @@
             </div>
             <img class="scroll-down" src="./img/icons/down-arrow.svg" alt="">
         </div>
-        <div class="burger-menu-modal">
-            <a href="">Команда</a>
-            <a href="">Услуги и цены</a>
-            <a href="">Записаться</a>
-            <a href="">Контакты</a>
-        </div>
     </div>
     <div class="screen">
         <div class="mission">Стрижка - важная часть образа, от которой зависит то, как Вас видят окружающие. Мы помогаем мужчинам раскрыть их истинные предрасположенности!</div>
         <div class="mission-counter title">1378</div>
         <div class="mission-sub">Мужчин уже стали лучше вместе с нами!</div>
     </div>
-    <div class="screen">
+    <div class="screen" id="team">
         <div class="team-title title">Команда</div>
         <div class="team">
             <div class="barber-card">
@@ -64,7 +64,7 @@
         </div>
     </div>
     <div class="screen">
-        <div class="services">
+        <div class="services" id="services">
             <div class="services-title title">Услуги и цены</div>
             <div id="tab-links">
                 <button class="tab-button" id="deafault-open-tab" onclick="openTab(event, 'hair')">СТРИЖКИ</button>
@@ -77,7 +77,7 @@
         </div>
     </div>
     <div class="screen">
-        <div class="visit">
+        <div class="visit" id="visit">
             <div class="visit-title title">Записаться</div>
             <div class="selects">
                 <div class="selects-serv">
@@ -131,7 +131,7 @@
         </div>
     </div>
     <div class="screen">
-        <div class="contacts">
+        <div class="contacts" id="contacts">
             <div class="contacts-title title">Контакты</div>
             <div class="contacts-content">
                 <div class="contacts-info">
