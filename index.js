@@ -163,13 +163,33 @@ document.getElementById('deafault-open-tab').click();
 // render selects 
 
 let selectServices = document.getElementById('select-service')
+selectServices.onchange = () => {changeValue(selectServices.value)}
 for (let i=0; i < services.length; i++) {
     selectServices.innerHTML +=
     `<option value="${services[i].id}">${services[i].name}</option>`
 }
 
-let selectedService = document.getElementById('select-service')
-function changeValue(id){
+function animateCounter(value){
+    let interval = 1000;
+    let startValue =  services[value].price - 100;
+    let endValue = services[value].price
+    let duration = Math.floor(interval / (endValue - startValue))
+    let counter = setInterval(function(){
+        startValue += 1
+        document.getElementById('total').innerHTML = `${startValue}`
+        if (startValue == endValue) {
+            clearInterval(counter)
+        }
+    
+    }, duration)
+}
+
+let total = document.getElementById('total')
+total.innerText = services[0].price
+function changeValue(value){
+    console.log('changed on ', value)
+    animateCounter(value)
+    // total.innerText = services[value].price
 
 }
 
