@@ -26,6 +26,34 @@ burgerMenuLinks.forEach((l) => {l.onclick = function(){
     changeBurgerBtnImg()
 }})
 
+// animate mission counter
+let mission = document.querySelector('.mission');
+let missionTop = mission.offsetTop // 890
+let missionHeight = 500;
+
+function animateMissionCounter(){
+    let interval = 1000;
+    let missionStartValue = 1300;
+    let missionEndValue = parseInt(document.querySelector('.mission-counter').innerHTML)
+    let duration = Math.floor(interval / (missionEndValue - missionStartValue))
+    let missionCounter = setInterval(function(){
+        missionStartValue += 1
+        document.querySelector('.mission-counter').innerHTML = `${missionStartValue}`
+        if (missionStartValue == missionEndValue) {
+            clearInterval(missionCounter)
+        }
+    
+    }, duration)
+}
+
+window.onscroll = () => {
+    let top_pos = window.scrollY
+    if (top_pos = missionTop && top_pos <= missionTop + missionHeight) {
+        console.log('here')
+        animateMissionCounter()
+    }
+}
+
 // select barber
 const barberSelector = document.getElementById('select-barber')
 barberSelector.value = ''
@@ -140,6 +168,13 @@ for (let i=0; i < services.length; i++) {
     `<option value="${services[i].id}">${services[i].name}</option>`
 }
 
+let selectedService = document.getElementById('select-service')
+
+
+
+
+
+
 // today
 const d = new Date();
 let today = d.getDay();
@@ -197,30 +232,4 @@ for (let i = 0; i < accordion.length; i++) {
     })
 }
 
-// animate mission counter
-let mission = document.querySelector('.mission');
-let missionTop = mission.offsetTop // 890
-let missionHeight = 500;
 
-function animateMissionCounter(){
-    let interval = 1000;
-    let missionStartValue = 1300;
-    let missionEndValue = parseInt(document.querySelector('.mission-counter').innerHTML)
-    let duration = Math.floor(interval / (missionEndValue - missionStartValue))
-    let missionCounter = setInterval(function(){
-        missionStartValue += 1
-        document.querySelector('.mission-counter').innerHTML = `${missionStartValue}`
-        if (missionStartValue == missionEndValue) {
-            clearInterval(missionCounter)
-        }
-    
-    }, duration)
-}
-
-window.onscroll = () => {
-    let top_pos = window.scrollY
-    if (top_pos = missionTop && top_pos <= missionTop + missionHeight) {
-        console.log('here')
-        animateMissionCounter()
-    }
-}
