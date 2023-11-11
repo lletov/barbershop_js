@@ -1,5 +1,12 @@
 console.log('index.js connected')
 
+// modal burger button menu
+let burgerButton = document.querySelector('.burger-menu')
+let burgerMenu = document.querySelector('.burger-menu-modal')
+burgerButton.onclick = function(){
+    burgerMenu.classList.toggle('visible')
+}
+
 // render services from list
 let services = [{
     id: 0,

@@ -136,6 +136,10 @@ button:hover {
 }
 
 
+.visible {
+    display: flex;
+}
+
 .banner-cta {
     margin-top: 150px;
     display: flex;
