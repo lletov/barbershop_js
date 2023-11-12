@@ -196,7 +196,7 @@ let nameInput = document.getElementById('name-input')
 let nameInputCounter = document.getElementById('name-counter')
 
 function nameInputChange(name) {
-    nameInputCounter.innerText = `${name.value.length}/20`
+    nameInputCounter.innerText = `${name.value.length}/15`
 }
 nameInput.oninput = () => {nameInputChange(nameInput)}
 
@@ -328,7 +328,7 @@ function fillModal(){
     <p>${document.getElementById('phone-input').value}</p>
     <button id='confirm-visit' onclick = 'openFinalModal()'>ПОДТВЕРДИТЬ И ЗАПИСАТЬСЯ</button>
     </div>`
-    const closeModalBtn = document.getElementById('close-modal')
+    const closeModalBtn = document.querySelector('.modal-close')
     closeModalBtn.onclick = closeModal
 }
 
@@ -339,7 +339,7 @@ function openFinalModal() {
     `
     <div class="final-modal-text">
     <div class="final-modal-line"></div>
-    <img src="./img/check-solid.svg">
+    <img src="./img/icons/check-solid.svg">
     <div class="final-modal-text">
         <p>Успешно!,<br>До встречи!</p>    
     </div>
