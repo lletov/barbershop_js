@@ -674,7 +674,8 @@ select {
 }
 
 #map {
-    width: 50%;
+    max-width: 40%;
+
     background-color: #bbb;
 }
 
