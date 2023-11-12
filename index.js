@@ -189,9 +189,16 @@ total.innerText = services[0].price
 function changeValue(value){
     console.log('changed on ', value)
     animateCounter(value)
-    // total.innerText = services[value].price
-
 }
+
+// get input name and length
+let nameInput = document.getElementById('name-input')
+let nameInputCounter = document.getElementById('name-counter')
+
+function nameInputChange(name) {
+    nameInputCounter.innerText = `${name.value.length}/20`
+}
+nameInput.oninput = () => {nameInputChange(nameInput)}
 
 
 
