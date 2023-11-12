@@ -673,10 +673,16 @@ select {
     gap: 20px;
 }
 
-#map {
-    max-width: 40%;
-
+.map {
+    max-width: 1000px;
     background-color: #bbb;
+}
+
+.map iframe {
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+    
 }
 
 #accordion {

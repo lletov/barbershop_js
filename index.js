@@ -223,7 +223,7 @@ if (today == 1) {
     document.getElementById('fri').style.backgroundColor = '#FAD9FB'
 } else if (today == 6) {
     document.getElementById('sat').style.backgroundColor = '#FAD9FB'
-} else if (today == 7) {
+} else if (today == 0) {
     document.getElementById('sun').style.backgroundColor = '#FAD9FB'
 }
 
