@@ -266,15 +266,18 @@ for (let i = 0; i < accordion.length; i++) {
 const modal = document.querySelector('.modal')
 const modalContent = document.querySelector('.modal-content')
 const openModalBtn = document.getElementById('create-visit')
-const closeModalBtn = document.getElementById('close-modal')
+
+
+console.log(document.getElementById('select-barber').value)
 
 function openModal(){
-    if (document.getElementById('name-input').value != '' 
+    if (
+    document.getElementById('select-barber').options[document.getElementById('select-barber').selectedIndex].text != null
+    && selectServices.options[selectServices.selectedIndex].text != null
     && document.getElementById('date-input').value != ''
-    && selectedServices.length != 0
+    && document.getElementById('name-input').value != '' 
     && document.getElementById('phone-input').value != ''
     && document.getElementById('phone-input').value.length == 2+1+3+1+3+3+3
-    && document.getElementById('select-barber').options[document.getElementById('select-barber').selectedIndex].text != null
     && document.getElementById('personal-data-input').checked == true
     ) {
         modal.style.display = 'flex'
@@ -293,7 +296,7 @@ function closeModal(){
     modal.style.display = 'none'
     document.querySelector('body').style.overflowY = 'auto'
 }
-closeModalBtn.onclick = closeModal
+
 
 window.onclick = function (event) {
     if (event. target == modal) {
@@ -310,24 +313,36 @@ window. addEventListener('keydown', function (event) {
 function fillModal(){
     let modalText = document.querySelector('.modal-text')
     modalText.innerHTML = `<div class="modal-text">
-    <h2>${document.getElementById('name-input').value}, <br> проверьте данные:</h2>
+    <button class="modal-close"><img src="./img/icons/close.svg" alt="close"></button>
+    <div class="confirm-modal-line"></div>
+    <h2>${document.getElementById('name-input').value}, <br> Проверьте данные:</h2>
     <h3>Мастер:</h3>
     <p>${document.getElementById('select-barber').options[document.getElementById('select-barber').selectedIndex].text}</p>
     <h3>Дата:</h3>
     <p>${document.getElementById('date-input').value}</p>
     <h3>Услуги:</h3>
-    <p>${selectedServices}</p>
-    <h3>Итого:</h3>
-    <p>${document.getElementById('total').textContent} р.</p>
-    <h3>Ваш номер:</h3>
+    <p>${selectServices.options[selectServices.selectedIndex].text}</p>
+    <h3>Итоговая сумма:</h3>
+    <p>${document.getElementById('total').textContent} ₽</p>
+    <h3>Ваш номер телефона:</h3>
     <p>${document.getElementById('phone-input').value}</p>
-    <button id='confirm-visit' onclick = 'openFinalModal()'>Подтвердить и записаться</button>
+    <button id='confirm-visit' onclick = 'openFinalModal()'>ПОДТВЕРДИТЬ И ЗАПИСАТЬСЯ</button>
     </div>`
-    
+    const closeModalBtn = document.getElementById('close-modal')
+    closeModalBtn.onclick = closeModal
 }
 
 function openFinalModal() {
     closeModal()
+    let finalModalContent = document.getElementById('modal-final-content')
+    finalModalContent.innerHTML = 
+    `
+    <div class="final-modal-text">
+    <div class="final-modal-line"></div>
+    <img src=""./img/check.png>
+    <p>Успешно!,<br>До встречи!</p>
+    </div>
+    `
     document.querySelector('.modal-final').classList.toggle('active')
     setTimeout(() => {
         document.querySelector('.modal-final.active').className = 'modal-final' 
