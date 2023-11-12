@@ -262,4 +262,74 @@ for (let i = 0; i < accordion.length; i++) {
     })
 }
 
+// modal
+const modal = document.querySelector('.modal')
+const modalContent = document.querySelector('.modal-content')
+const openModalBtn = document.getElementById('create-visit')
+const closeModalBtn = document.getElementById('close-modal')
 
+function openModal(){
+    if (document.getElementById('name-input').value != '' 
+    && document.getElementById('date-input').value != ''
+    && selectedServices.length != 0
+    && document.getElementById('phone-input').value != ''
+    && document.getElementById('phone-input').value.length == 2+1+3+1+3+3+3
+    && document.getElementById('select-barber').options[document.getElementById('select-barber').selectedIndex].text != null
+    && document.getElementById('personal-data-input').checked == true
+    ) {
+        modal.style.display = 'flex'
+        document.querySelector('body').style.overflowY = 'hidden'
+        fillModal()
+    } else {
+        document.getElementById('not-all-fields').style.display = 'block'
+        setTimeout(() => {
+            document.getElementById('not-all-fields').style.display = 'none'   
+        }, 5000)
+    }
+}
+openModalBtn.onclick = openModal
+
+function closeModal(){
+    modal.style.display = 'none'
+    document.querySelector('body').style.overflowY = 'auto'
+}
+closeModalBtn.onclick = closeModal
+
+window.onclick = function (event) {
+    if (event. target == modal) {
+        closeModal()
+}}
+
+window. addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        closeModal()
+    }
+})
+
+// insert info in modal-content
+function fillModal(){
+    let modalText = document.querySelector('.modal-text')
+    modalText.innerHTML = `<div class="modal-text">
+    <h2>${document.getElementById('name-input').value}, <br> проверьте данные:</h2>
+    <h3>Мастер:</h3>
+    <p>${document.getElementById('select-barber').options[document.getElementById('select-barber').selectedIndex].text}</p>
+    <h3>Дата:</h3>
+    <p>${document.getElementById('date-input').value}</p>
+    <h3>Услуги:</h3>
+    <p>${selectedServices}</p>
+    <h3>Итого:</h3>
+    <p>${document.getElementById('total').textContent} р.</p>
+    <h3>Ваш номер:</h3>
+    <p>${document.getElementById('phone-input').value}</p>
+    <button id='confirm-visit' onclick = 'openFinalModal()'>Подтвердить и записаться</button>
+    </div>`
+    
+}
+
+function openFinalModal() {
+    closeModal()
+    document.querySelector('.modal-final').classList.toggle('active')
+    setTimeout(() => {
+        document.querySelector('.modal-final.active').className = 'modal-final' 
+    }, 5000)
+}
