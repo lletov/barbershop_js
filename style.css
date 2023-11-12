@@ -109,6 +109,16 @@ button:hover {
     font-size: 26px;
 }
 
+.phone-icon {
+    display: none;
+}
+
+.phone-icon img {
+    width: 20px;
+    height: 20px;
+    filter: invert(99%) sepia(0%) saturate(504%) hue-rotate(76deg) brightness(117%) contrast(89%);
+}
+
 .burger-menu {
     border: none;
     background-color: transparent ;
