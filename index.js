@@ -334,13 +334,15 @@ function fillModal(){
 
 function openFinalModal() {
     closeModal()
-    let finalModalContent = document.getElementById('modal-final-content')
+    let finalModalContent = document.querySelector('.modal-final-content')
     finalModalContent.innerHTML = 
     `
     <div class="final-modal-text">
     <div class="final-modal-line"></div>
-    <img src=""./img/check.png>
-    <p>Успешно!,<br>До встречи!</p>
+    <img src="./img/check-solid.svg">
+    <div class="final-modal-text">
+        <p>Успешно!,<br>До встречи!</p>    
+    </div>
     </div>
     `
     document.querySelector('.modal-final').classList.toggle('active')

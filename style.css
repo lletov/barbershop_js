@@ -530,6 +530,67 @@ select {
     margin-bottom: 20px;
 }
 
+.modal-final {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 3;
+    
+}
+
+.modal-final.active {
+    display: block;
+    
+}
+
+.modal-final-content {
+    margin: auto;
+    margin-top: 100px;
+    max-width: 200px;
+    max-height: 200px;
+    background-color: var(--main-white);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    border: solid var(--main-black) 1px;
+}
+
+.modal-final-content {
+    text-align: center;
+}
+
+.modal-final-content img {
+    height: 30px;
+    background-color: var(--main-white);
+}
+
+.final-modal-line {
+    width: 60px;
+    height: 40px;
+    background-color: var(--accent-color);
+    position: absolute;
+    top: 25px;
+    left: 65px;
+    rotate: -3deg;
+    opacity: 0.5;
+    animation: draw-final-line 5s;
+}
+
+@keyframes draw-final-line {
+    from {width: 0px;}
+    to {width: 60px;}
+}
+
+
 #confirm-visit {
     padding: 20px 30px;
     font-size: 16px;
