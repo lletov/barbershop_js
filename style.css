@@ -641,7 +641,7 @@ select {
 }
 
 .contacts-info {
-    width: 400px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -939,4 +939,33 @@ select {
     #name-counter {
         left: 230px;
     }
+
+    #confirm-visit {
+        font-size: 12px;
+    }
+
+    .contacts-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contacts-info {
+        max-width: 500px;
+
+    }
+
+    .contacts-info img {
+        height: 40px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .map {
+        width: 100%;
+        height: 300px;
+        background-color: #bbb;
+    }
+
 }
