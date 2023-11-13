@@ -2,10 +2,10 @@
 It's a project of barbershop page, made from zero.
 
 Tools:
-- *Figma* (with auto layouts)
-- *HTML*
-- *CSS* (with animation and mobile adaptive)
-- *JavaScript* (with animation)
+- ***Figma*** (with auto layouts)
+- ***HTML***
+- ***CSS*** (with animation and mobile adaptive)
+- ***JavaScript*** (with animation)
 
 
 - [x] Desktop
@@ -39,7 +39,7 @@ Developing time remaining
 | step | time |
 |-----|--------|
 | Design | ~ 6 hours |
-| Layout | ~ 10 hours |
+| Layout | ~ 7 hours |
 
 You can input data in visit form to test modal windows.
 
