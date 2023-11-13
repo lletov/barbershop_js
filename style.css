@@ -155,7 +155,7 @@ button:hover {
 }
 
 .banner-cta {
-    margin-top: 150px;
+    margin-top: 15vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -236,6 +236,7 @@ button:hover {
 .team {
     display: flex;
     margin-bottom: 100px;
+    align-items: center;
 }
 
 .barber-card {
@@ -761,6 +762,7 @@ select {
 }
 
 .footer {
+    max-width: 100%;
     background-color: var(--main-black);
     color: var(--light-grey);
 }
@@ -806,7 +808,7 @@ select {
 }
 
 .footer-contacts {
-    width: 300px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -825,6 +827,12 @@ select {
 }
 
 @media screen and (max-width: 800px) {
+    .screen {
+        max-width: 800px;
+        margin: auto 0px;
+        padding: 75px 10px;
+    }
+
     .content {
         padding: 25px 10px;
     }
@@ -854,18 +862,18 @@ select {
 
     .banner-btn {
         margin-right: 0px;
-        margin-top: 100px;
+        margin-top: 5vh;
     }
 
     .banner-line {
         top: -50px;
-        width: 250px;
+        width: 230px;
         height: 50px;
     }
 
     @keyframes draw-banner-line {
         from {width: 0px;}
-        to {width: 250px;}
+        to {width: 230px;}
     }
 
     .burger-menu-modal {
