@@ -968,4 +968,25 @@ select {
         background-color: #bbb;
     }
 
+    .disp-flex {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .footer img {
+        height: 40px;
+    }
+
+    .footer-desc {
+        align-items: center;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    .footer-contacts {
+        text-align: justify;
+    }
 }
