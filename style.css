@@ -393,7 +393,7 @@ input[type=checkbox] {
 }
 
 select {
-    width: 350px;
+    max-width: 350px;
     height: 50px;
 }
 
@@ -900,5 +900,43 @@ select {
 
     .tab-str p {
         font-size: 16px;
+    }
+
+    .selects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        width: 280px;
+    }
+
+    select {
+        width: 280px;
+    }
+
+    .personal-data {
+        max-width: 280px;
+        color: var(--main-grey);
+    }
+
+    .total-str {
+        margin-top: 30px;
+        margin-bottom: 70px;
+    }
+
+    .selects-pers button {
+        max-width: 280px;
+        margin-top: 30px;
+    }
+
+    .visit-line {
+        width: 300px;
+        left: -10px;
+        top: 430px;
+    }
+
+    #name-counter {
+        left: 230px;
     }
 }
