@@ -1,62 +1,58 @@
 console.log('index.js connected')
 
-// render services from file
-let services = [{
-    id: 0,
-    name: 'Стрижка',
-    price: 1400
-}, {
-    id: 1,
-    name: 'Укладка',
-    price: 800
-}, {
-    id: 2,
-    name: 'Коррекция бороды',
-    price: 900
-}, {
-    id: 3,
-    name: 'Окрашивание',
-    price: 2400
-}, {
-    id:4,
-    name: 'Эпиляция воском',
-    price: 450
-}]
+// modal burger button menu
+let burgerButton = document.querySelector('.burger-menu')
+let burgerMenu = document.querySelector('.burger-menu-modal')
+let burgerButtonImg = burgerButton.querySelector('img')
+let burgerMenuShow = false
 
-let servicesBlock = document.getElementById('services')
-let servicesSelect = document.getElementById('services-input')
-for (let i=0; i < services.length; i++) {
-    let serviceRow =
-    `<div class="service-row">
-        <p>${services[i].name}</p>
-        <div class="service-row-line"></div>
-        <h3>${services[i].price} р.</h3>
-        <img src="./img/scissors.png" alt="">
-    </div>`
-    servicesBlock.innerHTML += serviceRow
+burgerButton.onclick = function(){(
+    burgerMenu.classList.toggle('visible'), 
+    changeBurgerBtnImg()
+)}
 
-    let serviceSelect = 
-    `<div class="service-select-row" >
-        <input type="checkbox" id="service-select-row-${services[i].id}" onclick="changeValue(${services[i].id})">
-        <label for="" value="${services[i].name}">${services[i].name} (${services[i].price} р.)</label>
-    </div>`
-    servicesSelect.innerHTML += serviceSelect
-
+function changeBurgerBtnImg(){
+    if (burgerMenuShow) {
+        burgerButtonImg.setAttribute('src', './img/icons/burger-menu.svg')
+    } else {
+        burgerButtonImg.setAttribute('src', './img/icons/close.svg')
+    }
+    burgerMenuShow = !burgerMenuShow
 }
 
-// mobile nav menu
-const header = document.getElementById('header')
-const navigation = document.querySelector('.header')
-const mobileNavButton = document.querySelector('.mobile-menu-button')
-mobileNavButton.onclick = function (){
-    navigation.classList.toggle('mobile');
-    header.style.flexDirection = 'column';
-    header.style.justifyContent = 'start';
-}
-function backStyle(){
-    header.style.flexDirection = 'row';
-    header.style.justifyContent = 'space-between';
-}
+let burgerMenuLinks = document.querySelectorAll('.burger-menu-modal a')
+burgerMenuLinks.forEach((l) => {l.onclick = function(){
+    burgerMenu.classList.toggle('visible'), 
+    changeBurgerBtnImg()
+}})
+
+// animate mission counter
+// let mission = document.querySelector('.mission');
+// let missionTop = mission.offsetTop // 890
+// let missionHeight = 500;
+
+// function animateMissionCounter(){
+//     let interval = 1000;
+//     let missionStartValue = 1300;
+//     let missionEndValue = parseInt(document.querySelector('.mission-counter').innerHTML)
+//     let duration = Math.floor(interval / (missionEndValue - missionStartValue))
+//     let missionCounter = setInterval(function(){
+//         missionStartValue += 1
+//         document.querySelector('.mission-counter').innerHTML = `${missionStartValue}`
+//         if (missionStartValue == missionEndValue) {
+//             clearInterval(missionCounter)
+//         }
+    
+//     }, duration)
+// }
+
+// window.onscroll = () => {
+//     let top_pos = window.scrollY
+//     if (top_pos = missionTop && top_pos <= missionTop + missionHeight) {
+//         console.log('here')
+//         animateMissionCounter()
+//     }
+// }
 
 // select barber
 const barberSelector = document.getElementById('select-barber')
@@ -64,6 +60,85 @@ barberSelector.value = ''
 function selectThisBarber(barber) {
     barberSelector.value = barber
     document.getElementById('visit').scrollIntoView()
+}
+
+// render services from list
+let services = [{
+    id: 0,
+    name: 'Мужская стрижка',
+    price: 1800,
+    time: 45,
+    category: 'hair'
+}, {
+    id: 1,
+    name: 'Стрижка FADE',
+    price: 2200,
+    time: 45,
+    category: 'hair'
+}, {
+    id: 2,
+    name: 'Стрижка машинкой',
+    price: 950,
+    time: 25,
+    category: 'hair'
+}, {
+    id: 3,
+    name: 'Моделирование бороды',
+    price: 1400,
+    time: 35,
+    category: 'beard'
+}, {
+    id: 4,
+    name: 'Стрижка усов и бороды',
+    price: 900,
+    time: 30,
+    category: 'beard'
+}, {
+    id: 5,
+    name: 'Опасное бритье',
+    price: 1700,
+    time: 40,
+    category: 'beard'
+}, {
+    id: 6,
+    name: 'Мужская стрижка + стрижка усов и бороды',
+    price: 2800,
+    time: 85,
+    category: 'complex'
+}, {
+    id: 7,
+    name: 'Стрижка машинкой + опасное бритье',
+    price: 2100,
+    time: 65,
+    category: 'complex'
+}]
+
+let hairServices = document.getElementById('hair')
+let beardServices = document.getElementById('beard')
+let complexServices = document.getElementById('complex')
+
+function tabStr(i) {
+    return (
+        `
+    <div class="tab-str">
+        <h1>${services[i].name}</h1>
+        <h2>${services[i].time} мин.</h2>
+        <p>${services[i].price} ₽</p>
+    </div>
+    `
+    )
+} 
+    
+for (let i=0; i < services.length; i++) {
+    if (services[i].category === 'hair') {
+        hairServices.innerHTML += tabStr(i)
+    }
+    else if (services[i].category === 'beard') {
+        beardServices.innerHTML += tabStr(i)
+    }
+    else if (services[i].category === 'complex') {
+        complexServices.innerHTML += tabStr(i)
+    }
 }
 
 
@@ -85,46 +160,85 @@ function openTab (evt, tabName) {
 // open default tab
 document.getElementById('deafault-open-tab').click();
 
-// discount
-function getDiscount() {
-    let possibleDiscounts = ['5%', '10%', '15%', '20%'];
-    let number = possibleDiscounts[Math.floor(Math.random() * possibleDiscounts.length)];
+// render selects 
 
-    let discountContent = document.getElementById('discount-number')
-    let loader = document.getElementById('loader')
-    let getDiscountButton = document.getElementById('get-discount-button')
+let selectServices = document.getElementById('select-service')
+selectServices.onchange = () => {changeValue(selectServices.value)}
+for (let i=0; i < services.length; i++) {
+    selectServices.innerHTML +=
+    `<option value="${services[i].id}">${services[i].name}</option>`
+}
+
+function animateCounter(value){
+    let interval = 1000;
+    let startValue =  services[value].price - 100;
+    let endValue = services[value].price
+    let duration = Math.floor(interval / (endValue - startValue))
+    let counter = setInterval(function(){
+        startValue += 1
+        document.getElementById('total').innerHTML = `${startValue}`
+        if (startValue == endValue) {
+            clearInterval(counter)
+        }
     
-    getDiscountButton.onclick = null;
-    discountContent.style.display = 'none'
-    loader.style.display = 'block'
-    setTimeout(() => {
-
-        getDiscountButton.onclick = getDiscount;
-        getDiscountButton.textContent = 'ПОПРОБОВАТЬ ЕЩЕ'
-        discountContent.style.color = '#000';
-        discountContent.textContent = number;
-        discountContent.style.display = 'block'
-        loader.style.display = 'none'
-    }, 2000)
-
+    }, duration)
 }
 
-// visit
-let selectedServices = []
-function changeValue(id) {
-    total = document.getElementById('total').textContent
-    totalElement = document.getElementById('total')
-    totalElement.innerHTML = '0'
-    if (document.getElementById(`service-select-row-${id}`).checked == true) {
-        let res = Number(total) + services[id].price
-        totalElement.innerHTML = `${res}`
-        selectedServices.push(services[id].name)
-    } else {
-        let res = Number(total) - services[id].price
-        totalElement.innerHTML = `${res}`
-        selectedServices = selectedServices.filter(item => item !== services[id].name)
+let total = document.getElementById('total')
+total.innerText = services[0].price
+function changeValue(value){
+    console.log('changed on ', value)
+    animateCounter(value)
+}
+
+// get input name and length
+let nameInput = document.getElementById('name-input')
+let nameInputCounter = document.getElementById('name-counter')
+
+function nameInputChange(name) {
+    nameInputCounter.innerText = `${name.value.length}/15`
+}
+nameInput.oninput = () => {nameInputChange(nameInput)}
+
+
+
+
+
+
+// today
+const d = new Date();
+let today = d.getDay();
+let time = d.toLocaleTimeString('en-US', { hour12: false, 
+    hour: "numeric", 
+    minute: "numeric"});
+if (today == 1) {
+    document.getElementById('mon').style.backgroundColor = '#FAD9FB'
+} else if (today == 2) {
+    document.getElementById('tue').style.backgroundColor = '#FAD9FB'
+} else if (today == 3) {
+    document.getElementById('wed').style.backgroundColor = '#FAD9FB'
+} else if (today == 4) {
+    document.getElementById('thu').style.backgroundColor = '#FAD9FB'
+} else if (today == 5) {
+    document.getElementById('fri').style.backgroundColor = '#FAD9FB'
+} else if (today == 6) {
+    document.getElementById('sat').style.backgroundColor = '#FAD9FB'
+} else if (today == 0) {
+    document.getElementById('sun').style.backgroundColor = '#FAD9FB'
+}
+
+// time
+let times = document.querySelectorAll('.online-marker')
+times.forEach((t) => {
+    if (time > '10:00' && time < '20:00'){
+        t.querySelector('p').innerText = 'Сейчас работаем'
+        t.querySelector('.marker').style.backgroundColor = '#05FF00'
     }
-}
+    else {
+        t.querySelector('p').innerText = 'Сейчас не работаем'
+        t.querySelector('.marker').style.backgroundColor = '#ff1100'
+    }
+})
 
 // accordion
 let accordion = document.getElementsByClassName('accordion-button');
@@ -152,15 +266,18 @@ for (let i = 0; i < accordion.length; i++) {
 const modal = document.querySelector('.modal')
 const modalContent = document.querySelector('.modal-content')
 const openModalBtn = document.getElementById('create-visit')
-const closeModalBtn = document.getElementById('close-modal')
+
+
+console.log(document.getElementById('select-barber').value)
 
 function openModal(){
-    if (document.getElementById('name-input').value != '' 
+    if (
+    document.getElementById('select-barber').options[document.getElementById('select-barber').selectedIndex].text != null
+    && selectServices.options[selectServices.selectedIndex].text != null
     && document.getElementById('date-input').value != ''
-    && selectedServices.length != 0
+    && document.getElementById('name-input').value != '' 
     && document.getElementById('phone-input').value != ''
     && document.getElementById('phone-input').value.length == 2+1+3+1+3+3+3
-    && document.getElementById('select-barber').options[document.getElementById('select-barber').selectedIndex].text != null
     && document.getElementById('personal-data-input').checked == true
     ) {
         modal.style.display = 'flex'
@@ -179,7 +296,7 @@ function closeModal(){
     modal.style.display = 'none'
     document.querySelector('body').style.overflowY = 'auto'
 }
-closeModalBtn.onclick = closeModal
+
 
 window.onclick = function (event) {
     if (event. target == modal) {
@@ -196,27 +313,40 @@ window. addEventListener('keydown', function (event) {
 function fillModal(){
     let modalText = document.querySelector('.modal-text')
     modalText.innerHTML = `<div class="modal-text">
-    <h2>${document.getElementById('name-input').value}, <br> проверьте данные:</h2>
+    <button class="modal-close"><img src="./img/icons/close.svg" alt="close"></button>
+    <div class="confirm-modal-line"></div>
+    <h2>${document.getElementById('name-input').value}, <br> Проверьте данные:</h2>
     <h3>Мастер:</h3>
     <p>${document.getElementById('select-barber').options[document.getElementById('select-barber').selectedIndex].text}</p>
     <h3>Дата:</h3>
     <p>${document.getElementById('date-input').value}</p>
     <h3>Услуги:</h3>
-    <p>${selectedServices}</p>
-    <h3>Итого:</h3>
-    <p>${document.getElementById('total').textContent} р.</p>
-    <h3>Ваш номер:</h3>
+    <p>${selectServices.options[selectServices.selectedIndex].text}</p>
+    <h3>Итоговая сумма:</h3>
+    <p>${document.getElementById('total').textContent} ₽</p>
+    <h3>Ваш номер телефона:</h3>
     <p>${document.getElementById('phone-input').value}</p>
-    <button id='confirm-visit' onclick = 'openFinalModal()'>Подтвердить и записаться</button>
+    <button id='confirm-visit' onclick = 'openFinalModal()'>ПОДТВЕРДИТЬ И ЗАПИСАТЬСЯ</button>
     </div>`
-    
+    const closeModalBtn = document.querySelector('.modal-close')
+    closeModalBtn.onclick = closeModal
 }
 
 function openFinalModal() {
     closeModal()
+    let finalModalContent = document.querySelector('.modal-final-content')
+    finalModalContent.innerHTML = 
+    `
+    <div class="final-modal-text">
+    <div class="final-modal-line"></div>
+    <img src="./img/icons/check-solid.svg">
+    <div class="final-modal-text">
+        <p>Успешно!,<br>До встречи!</p>    
+    </div>
+    </div>
+    `
     document.querySelector('.modal-final').classList.toggle('active')
     setTimeout(() => {
         document.querySelector('.modal-final.active').className = 'modal-final' 
     }, 5000)
 }
-    

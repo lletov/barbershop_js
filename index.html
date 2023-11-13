@@ -3,267 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BARBERSHOP</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-icon.png">
+    <title>GARSON Barbershop</title>
 </head>
 <body>
-    <div class="content" id="banner">
-        <div class="header" id="header">
-            <div class="logo">
-                <h1>BARBERSHOP</h1>
-            </div>
-            <div>
-                <div class="navigation">
-                    <a href="#price"><button onclick="navigation.classList='header';backStyle()">УСЛУГИ</button></a>
-                    <a href="#team"><button onclick="navigation.classList='header';backStyle()">КОМАНДА</button></a>
-                    <a href="#contacts"><button onclick="navigation.classList='header';backStyle()">КОНТАКТЫ</button></a>
+    <div class="banner" id="banner">
+        <div class="screen">
+            <div class="header">
+                <div class="logo">
+                    <h1>GARSON</h1>
+                    <p>BARBERSHOP</p>
                 </div>
-                <button class="mobile-menu-button">&#9868;</button>
-                <a href=""><button class="close-mobile-menu-button">Закрыть</button></a>
+                <div class="bar">
+                    <div class="online-marker" id="online-marker-banner">
+                        <div class="marker"></div>
+                        <p>Сейчас работаем</p>
+                    </div>
+                    <a href="tel:+79990543411" class="phone">+7 (999) 054 - 34 -11</a>
+                    <a href="tel:+79990543411" class="phone-icon"><img src="./img/icons/phone-svg.svg" alt="call"></a>
+                    <button class="burger-menu"><img src="./img/icons/burger-menu.svg" alt="menu"></button>
+                    <div class="burger-menu-modal">
+                        <a href="#team">Команда</a>
+                        <a href="#services">Услуги и цены</a>
+                        <a href="#visit">Записаться</a>
+                        <a href="#contacts">Контакты</a>
+                    </div>
+                </div>
             </div>
+            <div class="banner-cta">
+                <div class="banner-title">
+                    <p>Делаем</p>
+                    <p>Стрижки</p>
+                    <p>Для мужчин</p>
+                    <div class="banner-line"></div>
+                </div>
+                <a href="#visit"><button class="banner-btn">ЗАПИСАТЬСЯ</button></a>
+            </div>
+            <img class="scroll-down" src="./img/icons/down-arrow.svg" alt="">
         </div>
-        <div class="banner">
-            <div class="banner-title">
-                <h1>ЛУЧШИЙ <br>
-                    БАРБЕРШОП</h1>
-                <p>Стильно! Быстро! С удовольствием!</p>
-            </div>
-            <div id="banner-button-box">
-                <a href="#visit"><button>Записаться</button></a>
-                <p> Ежедневно, 10:00 - 22:00</p>
-            </div>
-        </div>
-        <p  id='banner-arrow-down'>&#8964;</p>
     </div>
-    <div class="content mission">
-        <p><b>Наша миссия</b> - делать красивыми всех вокруг! Любой может выглядеть достойно, независимо от возраста и типа волос.</p>
+    <div class="screen">
+        <div class="mission">Стрижка - важная часть образа, от которой зависит то, как Вас видят окружающие. Мы помогаем мужчинам раскрыть их истинные стороны!</div>
+        <div class="mission-counter title">1378</div>
+        <div class="mission-sub">Мужчин уже стали лучше вместе с нами!</div>
     </div>
-    <div class="content" id="team">
-        <div class="content-title"><h1>КОМАНДА</h1></div>
+    <div class="screen" id="team">
+        <div class="team-title title">Команда</div>
         <div class="team">
-            <div class="personal">
-                <img src="img/barber_andr.jpeg" alt="Барбер Андрей">
-                <div class="personal-title">АНДРЕЙ</div>
-                <div class="personal-subtitle">Мастер своего дела, внимателен к мелочам</div>
-                <button onclick="selectThisBarber('andrey-barber')">Записаться</button>
-                <div class="top-barber">
-                    <img src="./img/star_icon.png" alt="">
-                    <p>TOP BARBER</p>
-                </div>
+            <div class="barber-card">
+                <img src="./img/barber_andr.jpeg" alt="">
+                <h1>АНДРЕЙ</h1>
+                <p>Профессионал с большой буквы, топ барбер</p>
+                <button onclick="selectThisBarber('andrey-barber')">ЗАПИСАТЬСЯ</button>
             </div>
-            <div class="personal">
-                <img src="img/barber_ser.jpeg" alt="Барбер Сергей">
-                <div class="personal-title">СЕРГЕЙ</div>
-                <div class="personal-subtitle">Профессионал с большой буквы, топ барбер</div>
-                <button onclick="selectThisBarber('sergey-barber')">Записаться</button>
+            <div class="barber-card">
+                <img src="./img/barber_serr.jpeg" alt="">
+                <h1>СЕРГЕЙ</h1>
+                <p>Мастер своего дела, внимателен к мелочам</p>
+                <button onclick="selectThisBarber('sergey-barber')">ЗАПИСАТЬСЯ</button>
             </div>
         </div>
-        <div class="team-decor"><img src='./img/decor_1.png' alt=""></div>
     </div>
-    <div class="content price" id="price">
-        <div class="content-title"><h1>УСЛУГИ  И ЦЕНЫ</h1></div>
-        <div class="services-list" id="services"></div>
-        <div class="price-decor"><img src='./img/decor_2.png' alt=""></div>
-    </div>
-    <div class="content" id="tab">
-        <div id="tab-links">
-            <button class="tab-button" id="deafault-open-tab" onclick="openTab(event, 'haircut')">СТРИЖКА</button>
-            <button class="tab-button" onclick="openTab(event, 'styling')">УКЛАДКА</button>
-            <button class="tab-button" onclick="openTab(event, 'shave')">БРИТЬЕ</button>
+    <div class="screen">
+        <div class="services" id="services">
+            <div class="services-title title">Услуги и цены</div>
+            <div id="tab-links">
+                <button class="tab-button" id="deafault-open-tab" onclick="openTab(event, 'hair')">СТРИЖКИ</button>
+                <button class="tab-button" onclick="openTab(event, 'beard')">БОРОДА И БРИТЬЕ</button>
+                <button class="tab-button" onclick="openTab(event, 'complex')">КОМПЛЕКС</button>
+            </div>
+            <div class="tab-content" id="hair"></div>
+            <div class="tab-content" id="beard"></div>
+            <div class="tab-content" id="complex"></div>
         </div>
-        <div class="tab-content" id="haircut">
-            <p>Главные секреты барбершопов — профессионализм, инструменты и опыт работы. А также брутальная обстановка, в которой хочется побывать снова и снова. Барберу всегда можно довериться: Вы удивитесь, как стрижка может изменить внешность в лучшую сторону. Большинство парикмахерш из салонов красоты ограничиваются понятиями «бокс» и «ёжик» для мужчин. Да, это дешевле. Но хочется ли Вам быть «как все»? В барбершопе такого никогда не случится. Каждая стрижка у мужского мастера — индивидуальное творение.</p>
+    </div>
+    <div class="screen">
+        <div class="visit" id="visit">
+            <div class="visit-title title">Записаться</div>
+            <div class="selects">
+                <div class="selects-serv">
+                    <div>
+                        <h1>Выберите мастера</h1>
+                        <select name="select-barber" id="select-barber">
+                            <option value="sergey-barber">Сергей</option>
+                            <option value="andrey-barber">Андрей</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h1>Выберите услугу</h1>
+                        <select name="select-service" id="select-service"></select>
+                    </div>
+                    <div>
+                        <h1>Выберите дату</h1>
+                        <input type="date" id="date-input">
+                    </div>
+                    <div class="total-str">
+                        <p>Итого:</p>
+                        <div class="total-box">
+                            <h1 id="total"></h1>
+                            <p>₽</p>
+                        </div>
 
-            <p>Хотя и есть люди, которые возражают этому: в барбершопе тоже делают одинаковые стрижки. Да, такое бывает. Но лишь потому, что стандартные стрижки популярны среди клиентов. И в этом плане барбершопы выигрывают: если Вы все-таки решитесь на перемены в своем образе, предоставляя волю мастеру в подборе индивидуального стиля, Вы удивитесь огромному сочетанию техник, примененных барбером, инструментов и результату, который точно подойдет Вам.</p>
-        </div>
-        <div class="tab-content" id="styling">
-            <p>Укладка – это способ придать форму и объем волосам с помощью фена и горячих электроинструментов. Все, что предполагает использование дополнительных материалов и аксессуаров: для фиксации, декора, создания формы, – мы называем прической.</p>
-            <p>Несколько советов по укладке волос
-                <li>Начинайте укладку с сушки фоном. Очень важно отслеживать положение локонов во время укладки, поэтому задавайте направление волосам и слегка подкручивайте пряди для создания нужного эффекта.</li>
-                
-                <li>Обязательно используйте текстурирующие спреи, гель или воск. Предварительно разотрите его в ладонях, после чего аккуратно пройдитесь по волосам.</li>
-                
-                <li>Для закрепления укладки используйте небольшое количество лака или специального спрея.</li>
-                
-                <p>Какие средства понадобятся для укладки?</p>
-                <li>Гель для волос — универсальное моделирующее средство, напоминающее желе. С его помощью можно создать элегантный образ или навести легкий беспорядок. Его можно наносить как на влажные, так и на сухие волосы.</li>
-                <li>Воск - подойдет для создания любых укладок, придает волосам эластичность и гладкость.
-                    Глина – используется для фиксации отдельных прядей. Средство растирается пальцами, после чего кончики волос аккуратно подкручиваются.</li>
-                <li>Мусс – используется для создания прикорневого объема. Небольшое количество наносится на влажные волосы, после чего приступают к укладке с помощью фена.</li>
-                <li>Лак – обеспечивает быструю фиксацию, не утяжеляет и не склеивает волосы.</li></p>
-        </div>
-        <div class="tab-content" id="shave">
-            <p>Термин «королевское бритьё» непосредственно связан с именем Уильяма Труфита, открывшего свою первую цирюльню в 1805-м году в Лондоне, и впоследствии ставшего основателем марки "truefitt & hill". его заведение заслужило высочайшую репутацию среди английских аристократов и получило признание монархов Великобритании — именно продукция Труфита получила эксклюзивные привилегии королевского двора. Тогда же были заложены основы этой статусной процедуры.</p>
-            <p>Что же необходимо для того, чтобы бритьё стало «королевским»?
-            <li>Во-первых, правильная опасная бритва и барбер, умеющий с ней обращаться. Наши опытные мастера прошли специальное обучение и повышение квалификации по стандартам и правилам "Truefitt & Hill".</li>
-            <li>Во-вторых, мужская косметика премиум-класса от "Truefitt & Hill". Это по-настоящему элитные средства для бритья и ухода за кожей. Масла, мыло и бальзамы высочайшего качества на основе проверенных за два века рецептов, и с применением самых современных технологий.</li></p>
-        </div>
-    </div>
-    <div class="content" id="discount">
-        <div id="discount-title">
-            <h1>ПОЛУЧИТЕ СКИДКУ</h1>
-            <h3>Чтобы получить скидку, нажмите на кнопку.</h3>
-            <p>(Возможный размер скидки 5%, 10%, 15%, 20%)</p>
-            <button id="get-discount-button" onclick="getDiscount()">ПОЛУЧИТЬ СКИДКУ</button>
-        </div>
-        <div id="discount-offer">
-            <div id="discount-offer-height">
-                <h1 id="discount-number">00%</h1>
-                <div id="loader"></div>
-            </div> 
-        </div>
-    </div>
-    <div class='content' id="visit">
-        <div class="content-title"><h1>ЗАПИСАТЬСЯ</h1></div>
-        <div class="visit-content">
-            <div id="visit-services">
-                <h3>Выберите мастера</h3>
-                <select name="select-barber" id="select-barber">
-                    <option value="sergey-barber">Сергей</option>
-                    <option value="andrey-barber">Андрей</option>
-                </select>
-                <hr>
-                <h3>Выберите дату</h3>
-                <input type="date" id="date-input">
-                <hr>
-                <h3>Выберите услугу</h3>
-                <div id='services-input'></div>
-                <hr>
-                <div class="total-count">
-                    <h2>ИТОГО</h2>
-                    <h2 id="total">0</h2>
-                    <h2> .руб</h2>
+                    </div>
+                </div>
+                <div class="selects-pers">
+                    <div>
+                        <h1>Ваше имя</h1>
+                        <input type="text" 
+                            maxlength="15"
+                            id="name-input">
+                        <p id="name-counter">0/15</p>
+                    </div>
+                    <div>
+                        <h1>Ваш телефон</h1>
+                    <input type="text" 
+                            id="phone-input" 
+                            placeholder="+7(___)___-__-__">
+                    </div>
+                    <div class="personal-data">
+                        <input type="checkbox" id="personal-data-input">
+                        <label for="">Продолжая, я даю согласие на обработку моих персональных данных, а именно: сбор, хранение, использование для рассылки рекламных материалов.</label>
+                    </div>
+                    <div>
+                        <button id="create-visit" style="position: relative;z-index: 2;">ЗАПИСАТЬСЯ</button>
+                        <p id="not-all-fields">Пожалуйста, заполните все поля.</p>
+                    </div>
+                    <div class="visit-line"></div>
                 </div>
             </div>
-            <div id="visit-person">
-                <h3>Ваше имя</h3>
-                <input type="text" 
-                        maxlength="30"
-                        id="name-input">
-                <h3>Ваш телефон</h3>
-                <input type="text" 
-                        id="phone-input" 
-                        placeholder="+7(___)___-__-__">
-                <div class="personal-data">
-                    <input type="checkbox" id="personal-data-input">
-                    <label for="">Продолжая, я даю согласие на обработку моих персональных данных, а именно: сбор, хранение, использование для рассылки рекламных материалов.</label>
+        </div>
+    </div>
+    <div class="screen">
+        <div class="contacts" id="contacts">
+            <div class="contacts-title title">Контакты</div>
+            <div class="contacts-content">
+                <div class="contacts-info">
+                    <div>
+                        <h2>Адрес</h2>
+                        <h1>Большой Сухаревский переулок, 14, Москва, 127051</h1>
+                    </div>
+                    <div>
+                        <h2>Телефон</h2>
+                        <a href="tel:+79990543411" ><h1>+7 (999) 054 - 34 - 11</h1></a>
+                    </div>
+                    <div>
+                        <h2>Режим работы</h2>
+                        <h1>Ежедневно, 10:00 - 20:00</h1>
+                        <div class="days">
+                            <div class="day" id="mon">пн</div>
+                            <div class="day" id="tue">вт</div>
+                            <div class="day" id="wed">ср</div>
+                            <div class="day" id="thu">чт</div>
+                            <div class="day" id="fri">пт</div>
+                            <div class="day" id="sat">сб</div>
+                            <div class="day" id="sun">вс</div>
+                        </div>
+                        <div class="online-marker" style="margin-top: 15px;">
+                            <div class="marker"></div>
+                            <p style="color: var(--main-black);">Сейчас работаем</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Социальные сети</h2>
+                        <div class="social-icons">
+                            <a href="#"><img src="./img/icons/tg-icon.png" alt="tg"></a>
+                            <a href="#"><img src="./img/icons/wa-icon.png" alt="wa"></a>
+                            <a href="#"><img src="./img/icons/inst-icon.png" alt="inst"></a>
+                            <a href="#"><img src="./img/icons/vk-icon.png" alt="vk"></a>
+                        </div>
+                    </div>
                 </div>
-                <button id="create-visit">Записаться</button>
-                <p id="not-all-fields">Пожалуйста, заполните все поля.</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.9967432376598!2d37.6285912016314!3d55.76971262248228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a6f529313b9%3A0x39d51c62a8256c26!2z0KLQtdCw0YLRgCDQqNC60L7Qu9CwINCU0YDQsNC80LDRgtC40YfQtdGB0LrQvtCz0L4g0JjRgdC60YPRgdGB0YLQstCw!5e0!3m2!1sru!2sru!4v1697118753275!5m2!1sru!2sru"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </div>
-    <div class="content" id="accordion">
-        <button class="accordion-button">Нужно ли мыть голову перед стрижкой?</button>
-        <div class="accordion-panel">
-            <p>
-                Мастер, познакомившись с вами, увидит, какую форму, объем, манеру укладывать вы предпочитаете, чтобы предложить наиболее вам близкий вариант стрижки, даже если это будет новый фасон. Голову перед модельной стрижкой вам обязательно вымоют, это необходимо для выполнения технологии стрижки.
-            </p>
-        </div>
-        <hr />
-        <button class="accordion-button">Правильное ухаживание за волосами</button>
-        <div class="accordion-panel">
-            <p>
-                Независимо от густоты и длины шевелюры она ежедневно нуждается в уходе. При этом применяются разные средства для сухих, ломких, жирных, тонких и слабых волос. Шампуни и бальзамы-ополаскиватели, гели, экстракты следует подбирать индивидуально.
-                Большую помощь с этой проблемой для мужских волос предоставляют мастера нашего барбершопа, которые не один год проходят мастер-классы по изучению воздействия разных линий мужской косметики. Барберы посоветуют лучший вариант для конкретной кожи и волос. 
-            </p>
-        </div>
-        <hr />
-        <button class="accordion-button">Почему важно приводить детей в барбершоп?</button>
-        <div class="accordion-panel">
-            <p>
-                Детское кресло в нашем барбершопе всегда к услугам маленьких клиентов. С детства приучайте сына к порядку раз в месяц приходить в барбершоп и посещать мастера. С этих незначительных деталей начинается большая дорога в жизнь и определяется статус.
-                Детская стрижка требует особого мастерства. Поэтому лучше приводить мальчиков в барбершоп, наши мастера обладают высокой квалификацией. Они проходят переподготовку, изучают мастер-классы с новыми моделями, а также линии мужской косметики от мировых брендов.
-            </p>
-        </div>
-        <hr />
-        <button class="accordion-button">Правила гигиены для барбера</button>
-        <div class="accordion-panel">
-            <p>
-                Мы уважительно относимся к нашим клиентам и стремимся окружить чистотой, вниманием и заботой. Мы несем ответственность за здоровье и эмоциональное настроение. С этой целью в барбершопе:
-            </p>
-            <ul>
-                 <li>
-                    Обеспечивается чистота и порядок на рабочем месте, вытирается пыль, проводится дезинфекция рабочих поверхностей, влажная уборка после посетителей, воздух очищается ультрафиолетом от микробов;
-                </li>
-                <li>
-                    Все инструменты дезинфицируются и обрабатываются ультрафиолетом, бактерицидными лампами, барбер работает только со стерильными бритвами и лезвиями;
-                </li>
-                <li>
-                    Чистота рук находится на первом месте при контроле правил санитарии и гигиены, руки моются с мылом, обрабатываются дезинфицирующим раствором, при окрашивании и опасном бритье мастер работает в хирургических перчатках;
-                </li>
-                <li>
-                    Белье обрабатывается горячим утюгом, вся одежда, полотенца, салфетки, шапочки хранятся в специальных шкафах. Стильная форма персонала ежедневно сдается в прачечную для стирки;
-                </li>
-                <li>
-                    Волосы после стрижки смахиваются с клиента специальной кисточкой, стерильной салфеткой, ватным тампоном, пол подметается и содержимое убирается в пакеты.
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="content" id="contacts">
-        <div class="content-title"><h1>КОНТАКТЫ</h1></div>
-        <div id="contacts-content">
-            <div class="contacts-info">
-                <p>Адрес:</p>
-                <h3>Большой Сухаревский переулок, 14, Москва, 127051</h3>
-                <p>Телефон:</p>
-                <a href="tel:+79992133455"><h3>+7 (999) 213 - 34 - 55</h3></a>
-                <p>Режим работы:</p>
-                <h3>Ежедневно, 10:00 - 22:00</h3>               
+    <div class="screen">
+        <div class="faq">
+            <div class="faq-title title">Частые вопросы</div>
+            <div class="accordion">
+                <button class="accordion-button">Нужно ли мыть голову перед стрижкой?</button>
+                <div class="accordion-panel">
+                    <p>
+                        Мастер, познакомившись с вами, увидит, какую форму, объем, манеру укладывать вы предпочитаете, чтобы предложить наиболее вам близкий вариант стрижки, даже если это будет новый фасон. Голову перед модельной стрижкой вам обязательно вымоют, это необходимо для выполнения технологии стрижки.
+                    </p>
+                </div>
+                <hr />
+                <button class="accordion-button">Правильное ухаживание за волосами</button>
+                <div class="accordion-panel">
+                    <p>
+                        Независимо от густоты и длины шевелюры она ежедневно нуждается в уходе. При этом применяются разные средства для сухих, ломких, жирных, тонких и слабых волос. Шампуни и бальзамы-ополаскиватели, гели, экстракты следует подбирать индивидуально.
+                        Большую помощь с этой проблемой для мужских волос предоставляют мастера нашего барбершопа, которые не один год проходят мастер-классы по изучению воздействия разных линий мужской косметики. Барберы посоветуют лучший вариант для конкретной кожи и волос. 
+                    </p>
+                </div>
+                <hr />
+                <button class="accordion-button">Почему важно приводить детей в барбершоп?</button>
+                <div class="accordion-panel">
+                    <p>
+                        Детское кресло в нашем барбершопе всегда к услугам маленьких клиентов. С детства приучайте сына к порядку раз в месяц приходить в барбершоп и посещать мастера. С этих незначительных деталей начинается большая дорога в жизнь и определяется статус.
+                        Детская стрижка требует особого мастерства. Поэтому лучше приводить мальчиков в барбершоп, наши мастера обладают высокой квалификацией. Они проходят переподготовку, изучают мастер-классы с новыми моделями, а также линии мужской косметики от мировых брендов.
+                    </p>
+                </div>
+                <hr />
+                <button class="accordion-button">Правила гигиены для барбера</button>
+                <div class="accordion-panel">
+                    <p>
+                        Мы уважительно относимся к нашим клиентам и стремимся окружить чистотой, вниманием и заботой. Мы несем ответственность за здоровье и эмоциональное настроение. С этой целью в барбершопе:
+                    </p>
+                    <ul>
+                        <li>
+                            Обеспечивается чистота и порядок на рабочем месте, вытирается пыль, проводится дезинфекция рабочих поверхностей, влажная уборка после посетителей, воздух очищается ультрафиолетом от микробов;
+                        </li>
+                        <li>
+                            Все инструменты дезинфицируются и обрабатываются ультрафиолетом, бактерицидными лампами, барбер работает только со стерильными бритвами и лезвиями;
+                        </li>
+                        <li>
+                            Чистота рук находится на первом месте при контроле правил санитарии и гигиены, руки моются с мылом, обрабатываются дезинфицирующим раствором, при окрашивании и опасном бритье мастер работает в хирургических перчатках;
+                        </li>
+                        <li>
+                            Белье обрабатывается горячим утюгом, вся одежда, полотенца, салфетки, шапочки хранятся в специальных шкафах. Стильная форма персонала ежедневно сдается в прачечную для стирки;
+                        </li>
+                        <li>
+                            Волосы после стрижки смахиваются с клиента специальной кисточкой, стерильной салфеткой, ватным тампоном, пол подметается и содержимое убирается в пакеты.
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="contacts-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.9967432376598!2d37.6285912016314!3d55.76971262248228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a6f529313b9%3A0x39d51c62a8256c26!2z0KLQtdCw0YLRgCDQqNC60L7Qu9CwINCU0YDQsNC80LDRgtC40YfQtdGB0LrQvtCz0L4g0JjRgdC60YPRgdGB0YLQstCw!5e0!3m2!1sru!2sru!4v1697118753275!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
-    <div class="content" id="footer">
-        <div class="logo">
-            <!-- <img src="img/logo.png" alt="Barbershop"> -->
-            <h1>BARBERSHOP</h1>
-        </div>
-        <div class="footer-links">
-            <a href="#banner"><button>Вернуться наверх страницы</button></a>
-            <a href="#visit"><button>Записаться</button></a>
-            <a href="#team"><button>Команда</button></a>
-            <a href="#price"><button>Услуги и цены</button></a>
-            <a href="#contacts"><button>Контакты</button></a>
-        </div>
-        <div class="footer-contacts">
-            <p>Адрес:</p>
-            <h3>Большой Сухаревский переулок, 14, Москва, 127051</h3>
-            <p>Телефон:</p>
-            <a href="tel:+79992133455"><h3>+7 (999) 213 - 34 - 55</h3></a>
-            <p>Режим работы:</p>
-            <h3>Ежедневно, 10:00 - 22:00</h3> 
+    <div class="footer">
+        <div class="screen disp-flex">
+            <div class="footer-desc">
+                <div class="logo">
+                    <h1>GARSON</h1>
+                    <p>BARBERSHOP</p>
+                </div>
+                <div class="copyright">
+                    <h5>2019- 2023</h5>
+                    <h5>Все права защищены.</h5>
+                    <h5>GARSON - салон-парикмахерская. 
+                    ИП Иванов Иван Иванович.
+                    При копировании материалов сайта обязательна ссылка на первоисточник.</h5>
+                </div>
+                <div class="madeby"><h5>Сайт разработан <a href="https://t.me/lletov">Профессионалом</a></h5></div>
+                <div>
+                    <h2>Социальные сети</h2>
+                    <div class="social-icons">
+                        <a href="#"><img src="./img/icons/tg-icon.png" alt="tg"></a>
+                        <a href="#"><img src="./img/icons/wa-icon.png" alt="wa"></a>
+                        <a href="#"><img src="./img/icons/inst-icon.png" alt="inst"></a>
+                        <a href="#"><img src="./img/icons/vk-icon.png" alt="vk"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="">Наверх страницы</a>
+                <a href="#team">Команда</a>
+                <a href="#services">Услуги и цены</a>
+                <a href="#visit">Записаться</a>
+                <a href="#contacts">Контакты</a>
+            </div>
+            <div class="footer-contacts">
+                <div>
+                    <h2>Адрес</h2>
+                    <h1>Большой Сухаревский переулок, 14, Москва, 127051</h1>
+                </div>
+                <div>
+                    <h2>Телефон</h2>
+                    <a href="tel:+79990543411"><h1>+7 (999) 054 - 34 - 11</h1></a>
+                </div>
+                <div>
+                    <h2>Режим работы</h2>
+                    <h1>Ежедневно, 10:00 - 20:00</h1>
+                    <div class="online-marker" style="margin-top: 15px;">
+                        <div class="marker"></div>
+                        <p>Сейчас работаем</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="modal">
         <div class="modal-content">
             <div class="modal-text"></div>
-            <a href="#"><button id="close-modal">&#10539;</button></a>
         </div>
     </div>
     <div class="modal-final">
         <div class="modal-final-content">
-            <div class="modal-text">
-                 <h3>&#9988; Успешно!</h3>
-                 <p>Ждем Вас!</p>
-            </div>
         </div>
     </div>
-    <script src="index.js"></script>
-    
-    <!-- phone mask -->
-    <script src="https://unpkg.com/imask"></script>
-    <script>
-        const element = document.getElementById('phone-input');
-        const maskOptions = {
-        mask: '+{7}(000)000-00-00'
-        };
-        const mask = IMask(element, maskOptions);
-    </script>
 </body>
+<script src="./index.js"></script>
+<!-- phone mask -->
+<script src="https://unpkg.com/imask"></script>
+<script>
+    const element = document.getElementById('phone-input');
+    const maskOptions = {
+    mask: '+{7}(000)000-00-00'
+    };
+    const mask = IMask(element, maskOptions);
+</script>
 </html>
