@@ -833,7 +833,7 @@ select {
         font-size: 41px;
     }
 
-    .online-marker p {
+    #online-marker-banner p {
         display: none;
     }
 
