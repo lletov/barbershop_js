@@ -295,6 +295,7 @@ button:hover {
     color: var(--main-black);
     border: none;
     margin-right: 70px;
+    position: relative;
 }
 
 .tab-button:hover {
@@ -314,8 +315,8 @@ button:hover {
     width: 100px;
     height: 60px;
     background-color: var(--accent-color);
-    position: relative;
-    top: 40px;
+    position: absolute;
+    top: 0px;
     left: 0px;
     rotate: -3deg;
     opacity: 0.5;
@@ -873,5 +874,31 @@ select {
 
     .team {
         flex-direction: column;
+    }
+
+    .tab-button {
+        font-size: 16px;
+    }
+
+    .tab-button.active::before {
+        width: 63px;
+        height: 37px;
+    }
+
+    @keyframes draw-tab-line {
+        from {width: 0px;}
+        to {width: 63px;}
+    }
+
+    .tab-str h1 {
+        font-size: 16px;
+    }
+
+    .tab-str h2 {
+        font-size: 16px;
+    }
+
+    .tab-str p {
+        font-size: 16px;
     }
 }
