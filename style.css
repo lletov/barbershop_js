@@ -828,6 +828,10 @@ select {
         padding: 25px 10px;
     }
 
+    .title {
+        font-size: 41px;
+    }
+
     .online-marker p {
         display: none;
     }
@@ -865,5 +869,9 @@ select {
 
     .burger-menu-modal {
         width: 150px;
+    }
+
+    .team {
+        flex-direction: column;
     }
 }
